@@ -1,23 +1,5 @@
-"""
-Django settings for blog project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
-"""
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&!nc*7-ds_*(utx#a!d7cr-x-(#iav*&4#z(j93&c$^xb+!eqf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,3 +63,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+try:
+    from .local import *
+except ImportError:
+    pass
+
+try:
+    from .secret import *
+except ImportError:
+    pass
