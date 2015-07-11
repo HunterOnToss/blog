@@ -2,10 +2,18 @@ from django.db import models
 
 
 class Article(models.Model):
-    class Meta():
-        db_table = "_article"
+    class Meta:
+        db_table = "article"
 
     article_title = models.CharField(max_length=150)
     article_text = models.TextField()
     article_data = models.DateTimeField()
-    article_likes = models.IntegerField()
+    article_likes = models.IntegerField(default=0)
+
+
+class Comments(models.Model):
+    class Meta:
+        db_table = "comments"
+
+    comments_text = models.TextField()
+    comments_article = models.ForeignKey(Article)
