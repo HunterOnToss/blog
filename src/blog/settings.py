@@ -8,7 +8,9 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+TEMPLATE_DIRS = (
+    '/home/hunter/development/learn/blog/src/templates/',
+)
 # Application definition
 
 INSTALLED_APPS = (
