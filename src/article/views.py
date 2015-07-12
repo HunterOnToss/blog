@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http.response import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
-
+from django.shortcuts import render_to_response
 
 def basic_one(request):
     view = "basic_one"
@@ -15,3 +15,8 @@ def template_two(request):
     t = get_template("my_view.html")
     html = t.render(Context({'name': view}))
     return HttpResponse(html)
+
+
+def template_three(request):
+    view = "template_three"
+    return render_to_response("my_view.html", {"name": view})
