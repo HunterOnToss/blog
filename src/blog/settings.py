@@ -1,4 +1,5 @@
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -9,7 +10,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (
-    '/home/hunter/development/learn/blog/src/templates/',
+    os.path.join(BASE_DIR, 'templates/'),
 )
 # Application definition
 

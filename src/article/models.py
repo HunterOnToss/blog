@@ -1,7 +1,7 @@
 from django.db import models
 
 class Article(models.Model):
-    class Meta:
+    class Meta():
         db_table = "article"
 
     article_title = models.CharField(max_length=150)
@@ -11,7 +11,7 @@ class Article(models.Model):
 
 
 class Comments(models.Model):
-    class Meta:
+    class Meta():
         db_table = "comments"
 
     comments_text = models.TextField()
