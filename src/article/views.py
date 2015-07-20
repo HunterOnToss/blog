@@ -30,6 +30,6 @@ def articles(request):
 
 def article(request, article_id=1):
     return render_to_response('article.html',
-                              {'articles': Article.objects.get(id=article_id),
+                              {'article': Article.objects.get(id=article_id),
                                "comments": Comments.objects.filter(comments_article_id=article_id)}
     )
