@@ -58,10 +58,12 @@ def add_like(request, article_id):
 
 
 def add_comment(request, article_id):
-    if request.POST:
+    if request.POST and ("pause" not in request.session):
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
             comment.comments_article = Article.objects.get(id=article_id)
             form.save()
+            request.session.set_expiry(60)
+            request.session["pause"] = True
     return redirect("/articles/get/%s/" % article_id)
