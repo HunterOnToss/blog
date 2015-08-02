@@ -7,6 +7,7 @@ urlpatterns = patterns('',
                        url(r'^articles/all/$', 'article.views.articles'),
                        url(r'^articles/get/(?P<article_id>\d+)/$', 'article.views.article'),
                        url(r'^articles/add_like/(?P<article_id>\d+)/$', 'article.views.add_like'),
+                       url(r'^articles/add_comment/(?P<article_id>\d+)/$', 'article.views.add_comment'),
 
                        url(r'^$', 'article.views.articles'),
                        )

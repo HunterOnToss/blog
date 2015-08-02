@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 
 
@@ -15,5 +16,5 @@ class Comments(models.Model):
     class Meta():
         db_table = "comments"
 
-    comments_text = models.TextField()
+    comments_text = models.TextField(verbose_name="Текст коментария")
     comments_article = models.ForeignKey(Article)
