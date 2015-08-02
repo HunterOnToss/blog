@@ -43,9 +43,15 @@ def article(request, article_id=1):
 
 def add_like(request, article_id):
     try:
-        article = Article.objects.get(id=article_id)
-        article.article_likes += 1
-        article.save()
+        if article_id in request.COOKIES:
+            redirect("/")
+        else:
+            article = Article.objects.get(id=article_id)
+            article.article_likes += 1
+            article.save()
+            response = redirect("/")
+            response.set_cookie(article_id, "test")
+            return response
     except ObjectDoesNotExist:
         raise Http404
     return redirect("/")
