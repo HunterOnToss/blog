@@ -11,12 +11,6 @@ from django.core.paginator import Paginator
 from django.contrib import auth
 
 
-def basic_one(request):
-    view = "basic_one"
-    html = "<html><body>this is %s view </body><html>" % view
-    return HttpResponse(html)
-
-
 def template_two(request):
     view = "template_two"
     t = get_template("my_view.html")
@@ -24,9 +18,9 @@ def template_two(request):
     return HttpResponse(html)
 
 
-def template_three(request):
-    view = "template_three"
-    return render_to_response("my_view.html", {"name": view})
+def resume(request):
+    view = "resume"
+    return render_to_response("resume.html", {"name": view})
 
 
 def articles(request, page_number=1):
