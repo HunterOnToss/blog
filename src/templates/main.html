@@ -6,15 +6,17 @@
         <title>My Blog</title>
         <link rel="stylesheet" type="text/css" href="{% static "css/foundation.css" %}">
         <script src="{% static "js/libs/jquery-1.11.3.min.js" %}"></script>
+        <script src="{% static "js/libs/main.js" %}"></script>
+        <script src="{% static "comment.js" %}"></script>
     </head>
         <body>
             <div class="top-bar" style="background-color: darkslateblue">
                 <section class="top-bar-section">
                     <ul class="right">
                         {% if username %}
-                            <li><a href="/auth/logout/">Выйти {{ username }}</a></li>
+                            <li ><a id="clickme" href="/auth/logout/">Выйти {{ username }}</a></li>
                         {% else %}
-                            <li><a href="/auth/login/">Войти</a></li>
+                            <li><a id="clickme_in" href="/auth/login/">Войти</a></li>
                         {% endif %}
                         <li><a href="/resume/">Резюме</a></li>
                     </ul>
