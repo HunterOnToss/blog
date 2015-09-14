@@ -53,14 +53,14 @@ $.ajaxSetup({
 });
 
 $(document).ready(function(){
-                $("a#clickme").click(function(event) {
-                    event.preventDefault();
-                    $.ajax({
-                        url: "/auth/logout/",
-                        type: "POST",
-                        data: "",
-                        dataType: "json",
-                        success: $.("a#clickme").replaceWith('<a href="/auth/login/">Войти</a></li>')
-                    });
-                });
-            });
+    $("a#clickme").click(function(event) {
+        event.preventDefault();
+        $.ajax({
+            url: "/auth/logout/",
+            type: "POST",
+            data: "",
+            dataType: "json",
+            success: $("a#clickme").replaceWith('<a href="/auth/login/">Войти</a></li>')
+        });
+    });
+});

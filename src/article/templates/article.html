@@ -11,7 +11,7 @@
         <p>{{ comment.comments_text }}</p>
     {% endfor %}
     {% if username %}
-    <form action="/articles/add_comment/{{ article.id }}/" method="post">
+    <form action="/articles/add_comment/{{ article.id }}/" method="POST" id="post-form">
         {% csrf_token %}
         {{ form }}
         <input type="submit" class="button" value="Добавить коментарий">
