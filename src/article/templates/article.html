@@ -10,10 +10,12 @@
     {% for comment in comments %}
         <p>{{ comment.comments_text }}</p>
     {% endfor %}
+    <p id="talk"></p>
     {% if username %}
     <form action="/articles/add_comment/{{ article.id }}/" method="POST" id="post-form">
         {% csrf_token %}
         {{ form }}
+         <div id="results"></div>
         <input type="submit" class="button" value="Добавить коментарий">
     </form>
     {% endif %}

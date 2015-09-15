@@ -63,4 +63,34 @@ $(document).ready(function(){
             success: $("a#clickme").replaceWith('<a href="/auth/login/">Войти</a></li>')
         });
     });
+
+    $('#post-form').on('submit', function(event){
+        event.preventDefault();
+        var l = document.getElementById("post-form").action;
+        var arr = l.split("add_comment/")[1];
+
+        console.log(arr);
+        create_post(arr);
 });
+
+});
+
+function create_post(l) {
+    $.ajax({
+        url: "/articles/add_comment/" + l,
+        type: "POST",
+        data: {the_post: $("#post-text").val()},
+
+        success : function(json) {
+            $('#post-text').val(''); // remove the value from the input
+             $("#talk").append("<p>"+json.text+"</p>");
+        },
+
+        error : function(xhr,errmsg,err) {
+            alert("Please wait are 20 second!")
+
+        }
+    });
+}
+
+

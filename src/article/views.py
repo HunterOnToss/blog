@@ -9,7 +9,7 @@ from forms import CommentForm
 from django.core.context_processors import csrf
 from django.core.paginator import Paginator
 from django.contrib import auth
-
+import json
 
 def template_two(request):
     view = "template_two"
@@ -58,12 +58,17 @@ def add_like(request, article_id):
 
 
 def add_comment(request, article_id):
-    if request.POST and ("pause" not in request.session):
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.comments_article = Article.objects.get(id=article_id)
-            form.save()
-            request.session.set_expiry(60)
-            request.session["pause"] = True
-    return redirect("/articles/get/%s/" % article_id)
+    if request.method == "POST" and ("pause" not in request.session):
+        post_text = request.POST.get('the_post')
+        response_data = {'text': post_text}
+
+        post = Comments(comments_text=post_text, comments_article=Article.objects.get(id=article_id))
+        post.save()
+
+        request.session.set_expiry(25)
+        request.session["pause"] = True
+
+        return HttpResponse(
+                json.dumps(response_data),
+                content_type="application/json"
+            )
