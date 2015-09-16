@@ -58,15 +58,12 @@ def add_like(request, article_id):
 
 
 def add_comment(request, article_id):
-    if request.method == "POST" and ("pause" not in request.session):
+    if request.method == "POST":
         post_text = request.POST.get('the_post')
         response_data = {'text': post_text}
 
         post = Comments(comments_text=post_text, comments_article=Article.objects.get(id=article_id))
         post.save()
-
-        request.session.set_expiry(25)
-        request.session["pause"] = True
 
         return HttpResponse(
                 json.dumps(response_data),
