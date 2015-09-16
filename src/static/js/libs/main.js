@@ -64,6 +64,13 @@ $(document).ready(function(){
         });
     });
 
+     $('a#like').click(function(event){
+        event.preventDefault();
+        var l = document.getElementById("a#like");
+        var arr = l.split("add_like/")[1];
+        add_like(arr);
+    });
+
     $('#post-form').on('submit', function(event){
         event.preventDefault();
         var l = document.getElementById("post-form").action;
@@ -72,6 +79,22 @@ $(document).ready(function(){
 });
 
 });
+
+function add_like(arr) {
+        $.ajax({
+            url: "/articles/add_comment/" + arr,
+            type: "POST",
+
+            success : function(json) {
+                console.log(json)
+            },
+            error : function(xhr,errmsg,err) {
+                alert("Please wait are 20 second!")
+
+            }
+        });
+
+        }
 
 function create_post(l) {
     $.ajax({
@@ -90,5 +113,6 @@ function create_post(l) {
         }
     });
 }
+
 
 
