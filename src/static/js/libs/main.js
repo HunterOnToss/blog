@@ -68,8 +68,6 @@ $(document).ready(function(){
         event.preventDefault();
         var l = document.getElementById("post-form").action;
         var arr = l.split("add_comment/")[1];
-
-        console.log(arr);
         create_post(arr);
 });
 
