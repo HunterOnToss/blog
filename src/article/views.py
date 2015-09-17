@@ -46,7 +46,7 @@ def add_like(request, article_id):
         article = Article.objects.get(id=article_id)
         article.article_likes += 1
         article.save()
-        response_data = {"like" : article.article_likes}
+        response_data = {"like" : article.article_likes, "art_id" : article_id}
 
         return HttpResponse(
             json.dumps(response_data),

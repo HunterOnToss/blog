@@ -66,9 +66,7 @@ $(document).ready(function(){
 
      $('a#like').click(function(event){
         event.preventDefault();
-        var l = document.getElementById("a#like");
-        var arr = l.split("add_like/")[1];
-        add_like(arr);
+        add_like($(this).attr('href'));
     });
 
     $('#post-form').on('submit', function(event){
@@ -82,11 +80,12 @@ $(document).ready(function(){
 
 function add_like(arr) {
         $.ajax({
-            url: "/articles/add_comment/" + arr,
+            url: arr,
             type: "POST",
 
             success : function(json) {
-                console.log(json)
+                console.log(json.art_id);
+                $("p#" + json.art_id).replaceWith(json.like);
             },
             error : function(xhr,errmsg,err) {
                 alert("Please wait are 20 second!")
