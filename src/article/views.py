@@ -53,6 +53,11 @@ def add_like(request, article_id):
             content_type="application/json"
         )
 
+    return HttpResponse(
+            json.dumps({"fail": "true"}),
+            content_type="application/json"
+        )
+
 
 def add_comment(request, article_id):
     if request.method == "POST":

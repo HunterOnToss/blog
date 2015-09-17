@@ -84,8 +84,10 @@ function add_like(arr) {
             type: "POST",
 
             success : function(json) {
-                console.log(json.art_id);
-                $("p#" + json.art_id).replaceWith(json.like);
+                $("p#" + json.art_id + "#like").empty();
+                //    .replaceWith('<p id="' + json.art_id +'"><a id="like" href="/articles/add_like/' +
+                //    json.art_id + '/"><img src="/static/like2.jpg" width="45px" height="30px"></a>' +
+                //json.like + '</p>');
             },
             error : function(xhr,errmsg,err) {
                 alert("Please wait are 20 second!")
