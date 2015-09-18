@@ -4,13 +4,13 @@
 {% block article %}
     <div class="large-8 columns">
     {% for article in articles %}
-        <h6>Дата публикации{{ article.article_date }}</h6>
         <h4><a href="/articles/get/{{ article.id }}">{{ article.article_title }}</a></h4>
         <p>{{ article.article_text }}</p>
         <p id="{{ article.id }}"  style="display: inline-block;"><a id="like" href="/articles/add_like/{{ article.id }}/">
             <img src="{% static "like2.jpg" %}" width="45px" height="30px"></a>
-            </p>
+        </p>
         <div id="{{ article.id }}likes" style="display: inline-block;">{{ article.article_likes }}</div>
+        <h6>Дата публикации: {{ article.article_date }}</h6>
         <hr>
     {% endfor %}
     </div>
