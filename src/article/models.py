@@ -9,6 +9,7 @@ class Article(models.Model):
     article_title = models.CharField(max_length=150)
     article_text = models.TextField()
     article_date = models.DateTimeField()
+    article_img = models.ImageField(upload_to="img", verbose_name=u'Photo')
     article_likes = models.IntegerField(default=0)
 
 

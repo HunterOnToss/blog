@@ -2,5 +2,6 @@
 .idea/
 *.sqlite3
 local.py
+media
 *.pyc
 secret.py
