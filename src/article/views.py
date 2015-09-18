@@ -45,26 +45,18 @@ def add_like(request, article_id):
     if request.method == "POST":
         article = Article.objects.get(id=article_id)
         if request.session.test_cookie_worked():
-
             article.article_likes -= 1
             article.save()
             response_data = {"like": article.article_likes, "art_id" : article_id}
             response = HttpResponse(json.dumps(response_data), content_type="application/json")
-
             request.session.delete_test_cookie()
         else:
             article.article_likes += 1
             article.save()
             response_data = {"like": article.article_likes, "art_id" : article_id}
             response = HttpResponse(json.dumps(response_data), content_type="application/json")
-            # response.set_cookie(article_id, 'user_name')
             request.session.set_test_cookie()
         return response
-
-    return HttpResponse(
-            json.dumps({"fail": "true"}),
-            content_type="application/json"
-        )
 
     return HttpResponse(
             json.dumps({"fail": "true"}),
