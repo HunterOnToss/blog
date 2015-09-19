@@ -1,0 +1,37 @@
+body {
+  background: #fff;
+  color: #222;
+  cursor: auto;
+  font-family: Droid Sans, Arial, sans-serif;;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+#left_panel {
+    background-color: #b9b9b9;
+    float: left;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+#center_panel {
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+h3 {
+    color: #cf2a0e;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}
+
+#main {
+    width: 150px;
+    height: 150px;
+}
