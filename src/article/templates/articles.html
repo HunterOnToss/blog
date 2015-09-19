@@ -8,7 +8,7 @@
         <img src="/media/{{ article.article_img }}"  width="350px" height="300px">
         <p>{{ article.article_text }}</p>
         <p id="{{ article.id }}"  style="display: inline-block;"><a id="like" href="/articles/add_like/{{ article.id }}/">
-            <img src="{% static "like2.jpg" %}" width="45px" height="30px"></a>
+            <img src="{% static "like.png" %}" width="45px" height="30px"></a>
         </p>
         <div id="{{ article.id }}likes" style="display: inline-block;">{{ article.article_likes }}</div>
         <h6>Дата публикации: {{ article.article_date }}</h6>
