@@ -2,7 +2,7 @@
 {% load staticfiles  %}
 
 {% block article %}
-    <div class="large-8 columns">
+    <div>
     {% for article in articles %}
         <h4><a href="/articles/get/{{ article.id }}">{{ article.article_title }}</a></h4>
         {% for img in article.images_set.values %}

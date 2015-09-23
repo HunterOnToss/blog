@@ -25,8 +25,13 @@
     </script>
     </head>
         <body>
-            <div class="top-bar" style="background-color: darkslateblue">
+            <div class="top-bar" style="position: fixed; top: 0px; background-color: white; width: 100%;; ">
                 <section class="top-bar-section">
+                    <ul class="left">
+                        <li>
+                            <a href="/">Мой блог</a>
+                        </li>
+                    </ul>
                     <ul class="right">
                         {% if username %}
                             <li ><a id="clickme" href="/auth/logout/">Выйти {{ username }}</a></li>
@@ -37,8 +42,7 @@
                     </ul>
                 </section>
             </div>
-            <h1><a href="/">Мой блог</a></h1>
-            <div class="row">
+            <div class="row" style="padding: 70px 0 0 0">
             {% block article %}{% endblock %}
             {% block login %}{% endblock %}
             </div>
