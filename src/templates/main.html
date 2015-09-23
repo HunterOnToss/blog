@@ -20,21 +20,9 @@
       };
       var t = new Trianglify(ops);
       var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
-      document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+      document.body.setAttribute('style', 'background: '+pattern.dataUrl + ' center top fixed no-repeat');
     });
     </script>
-{#      <style type="text/css">#}
-{#      body {#}
-{#          background: url("{% static "img/fon_green.jpg" %}") center top fixed no-repeat;#}
-{#          -moz-background-size: 100%; /* Firefox 3.6+ */#}
-{#          -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */#}
-{#          -o-background-size: 100%; /* Opera 9.6+ */#}
-{#          background-size: 100%;#}
-{#      }#}
-{#      a {#}
-{#          color: darkblue;#}
-{#      }#}
-{#      </style>#}
     </head>
         <body>
             <div class="top-bar" style="background-color: darkslateblue">
