@@ -1,9 +1,12 @@
 {% extends 'main.html' %}
 
 {% block article %}
-<h4>{{ article.article_date }}</h4>
 <h2>{{ article.article_title }}</h2>
-<p>{{ article.article_text }}</p>
+    {% for img in imgs %}
+        <p><img src="/media/{{ img.images_img  }}"  width="250px" height="100px"></p>
+    {% endfor %}
+    <p>{{ article.article_text }}</p>
+    <h4>{{ article.article_date }}</h4>
 <hr>
     <div class="large-offset-1 large-8 columns">
     <p>Коментарии:</p>

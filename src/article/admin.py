@@ -1,13 +1,21 @@
 from django.contrib import admin
-from article.models import Article, Comments
+from article.models import Article, Comments, Images
+
+
+class ImagaCollectionInLine(admin.StackedInline):
+    model = Images
+    extra = 1
+
 
 class ArticleInline(admin.StackedInline):
     model = Comments
     extra = 2
 
+
 class ArticleAdmin(admin.ModelAdmin):
-    fields = ["article_title", "article_text", "article_date", "article_img"]
-    inlines = [ArticleInline]
+    fields = ["article_title", "article_text", "article_date"]
+    inlines = [ArticleInline, ImagaCollectionInLine]
     list_filter = ["article_date"]
+
 
 admin.site.register(Article, ArticleAdmin)

@@ -9,7 +9,6 @@ class Article(models.Model):
     article_title = models.CharField(max_length=150)
     article_text = models.TextField()
     article_date = models.DateTimeField()
-    article_img = models.ImageField(upload_to="img", verbose_name=u'Photo')
     article_likes = models.IntegerField(default=0)
 
 
@@ -19,3 +18,11 @@ class Comments(models.Model):
 
     comments_text = models.TextField(verbose_name="Текст коментария")
     comments_article = models.ForeignKey(Article)
+
+
+class Images(models.Model):
+    class Meta():
+        db_table = "img"
+
+    images_img = models.ImageField(upload_to="img", verbose_name=u'Photo')
+    images_article = models.ForeignKey(Article)

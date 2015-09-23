@@ -3,7 +3,7 @@ from django.http.response import HttpResponse, Http404
 from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render_to_response, redirect
-from article.models import Article, Comments
+from article.models import Article, Comments, Images
 from django.core.exceptions import ObjectDoesNotExist
 from forms import CommentForm
 from django.core.context_processors import csrf
@@ -35,6 +35,7 @@ def article(request, article_id=1):
     args = {}
     args.update(csrf(request))
     args["article"] = Article.objects.get(id=article_id)
+    args["imgs"] = Images.objects.filter(images_article_id=article_id)
     args["comments"] = Comments.objects.filter(comments_article_id=article_id)
     args["form"] = comment_form
     args["username"] = auth.get_user(request).username
