@@ -21,13 +21,12 @@
       var t = new Trianglify(ops);
       var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
       document.body.setAttribute('style', 'background: '+pattern.dataUrl + ' center top fixed no-repeat');
-{#        $(".top-bar").attr('style', 'background: '+pattern.dataUrl);#}
 
     });
     </script>
     </head>
         <body>
-            <div class="top-bar" style="position: fixed; top: 0; background-color: darkslateblue; width: 100%;; ">
+            <div class="top-bar" style="position: fixed; top: 0; background-color: darkslateblue; width: 100%;">
                 <section class="top-bar-section">
                     <ul class="left">
                         <li>

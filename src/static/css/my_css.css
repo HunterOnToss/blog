@@ -50,3 +50,24 @@ img {
     padding: 1px 1px 10px 190px;
 
 }
+
+a {
+    color: black;
+}
+
+/*a:visited {*/
+    /*color: orangered;*/
+/*}*/
+
+.top-bar {
+    position: fixed;
+    right: 0; /* Расстояние от правого края окна браузера */
+    top: 0;
+    width: 170px;
+    height: 75px;
+}
+
+.top-bar img {
+    width: 160px;
+    height: 75px;
+}
