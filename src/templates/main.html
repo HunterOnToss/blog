@@ -11,19 +11,19 @@
          <script src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
 
-        <script type="text/javascript">
-    // random background pattern
-    $(function(){
-      // See more options here: https://github.com/qrohlf/trianglify#options
-      var ops = {
-        noiseIntensity: 0
-      };
-      var t = new Trianglify(ops);
-      var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
-      document.body.setAttribute('style', 'background: '+pattern.dataUrl + ' center top fixed no-repeat;');
-
-    });
-    </script>
+{#        <script type="text/javascript">#}
+{#    // random background pattern#}
+{#    $(function(){#}
+{#      // See more options here: https://github.com/qrohlf/trianglify#options#}
+{#      var ops = {#}
+{#        noiseIntensity: 0#}
+{#      };#}
+{#      var t = new Trianglify(ops);#}
+{#      var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);#}
+{#      document.body.setAttribute('style', 'background: '+pattern.dataUrl + ' center top fixed no-repeat;');#}
+{##}
+{#    });#}
+{#    </script>#}
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -42,7 +42,7 @@
             });
     </script>
     </head>
-        <body>
+
             <div class="top-bar" style="position: fixed; top: 0; width: 100%; height: 50px">
                 <section class="top-bar-section">
                     <ul class="left">
