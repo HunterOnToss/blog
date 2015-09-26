@@ -55,9 +55,9 @@ a {
     color: black;
 }
 
-/*a:visited {*/
-    /*color: orangered;*/
-/*}*/
+a:visited {
+    color: orangered;
+}
 
 .top-bar {
     position: fixed;
