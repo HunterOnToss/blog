@@ -67,7 +67,6 @@ $(document).ready(function(){
         $("h4").css("color", "#1090C7");
         $("h2").css("color", "#5245DE");
         $("a").css("color", "#1908D1");
-
     });
 
 
