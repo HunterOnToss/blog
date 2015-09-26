@@ -24,22 +24,39 @@
 
     });
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("a#clickme").click(function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: "/auth/logout/",
+                    type: "POST",
+                    data: "",
+                    dataType: "json",
+                    success: $("a#clickme").replaceWith('<a href="/auth/login/" style="height: 60px">' +
+                        '<img src="{% static "img/enter.png" %}"></a></li>')
+                });
+            });
+
+            });
+    </script>
     </head>
         <body>
-            <div class="top-bar" style="position: fixed; top: 0; background-color: darkslateblue; width: 100%;">
+            <div class="top-bar" style="position: fixed; top: 0; width: 100%; height: 60px">
                 <section class="top-bar-section">
                     <ul class="left">
                         <li>
-                            <a href="/">Мой блог</a>
+                            <a href="/" style="height: 60px"><img src="{% static "img/my_blog.png" %}"></a>
                         </li>
                     </ul>
                     <ul class="right">
                         {% if username %}
-                            <li ><a id="clickme" href="/auth/logout/">Выйти {{ username }}</a></li>
+                            <li ><a id="clickme" href="/auth/logout/" style="height: 60px"><img src="{% static "img/exit.png" %}"></a></li>
                         {% else %}
-                            <li><a href="/auth/login/">Войти</a></li>
+                            <li><a href="/auth/login/" style="height: 60px"><img src="{% static "img/enter.png" %}"></a></li>
                         {% endif %}
-                        <li><a href="/resume/">Резюме</a></li>
+                        <li><a href="/resume/" style="height: 60px"><img src="{% static "img/rezume.png" %}"></a></li>
                     </ul>
                 </section>
             </div>
