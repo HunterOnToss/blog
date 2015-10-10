@@ -54,6 +54,17 @@ $.ajaxSetup({
 
 $(document).ready(function(){
 
+    $('a#red_button').click(function(event){
+        event.preventDefault();
+        var ops = {
+        noiseIntensity: 0
+      };
+      var t = new Trianglify(ops);
+      var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
+      document.body.setAttribute('style', 'background: '+pattern.dataUrl + ' center top fixed no-repeat;');
+    });
+
+
      $('a#like').click(function(event){
         event.preventDefault();
         add_like($(this).attr('href'));

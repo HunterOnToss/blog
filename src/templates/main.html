@@ -10,21 +10,6 @@
         <script src="{% static "comment.js" %}"></script>
          <script src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
-
-{#        <script type="text/javascript">#}
-{#    // random background pattern#}
-{#    $(function(){#}
-{#      // See more options here: https://github.com/qrohlf/trianglify#options#}
-{#      var ops = {#}
-{#        noiseIntensity: 0#}
-{#      };#}
-{#      var t = new Trianglify(ops);#}
-{#      var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);#}
-{#      document.body.setAttribute('style', 'background: '+pattern.dataUrl + ' center top fixed no-repeat;');#}
-{##}
-{#    });#}
-{#    </script>#}
-
     <script type="text/javascript">
         $(document).ready(function(){
             $("a#clickme").click(function(event) {
@@ -42,11 +27,12 @@
             });
     </script>
     </head>
-
+{#        <body style="background: url({% static "img/fon/purple_sky.jpg" %}) center top fixed no-repeat;background-size: 80%">#}
+          <body>
             <div class="top-bar" style="position: fixed; top: 0; width: 100%; height: 50px">
                 <section class="top-bar-section">
                     <ul class="left">
-                        <li><a href="/"><img src="{% static "img/button/red.png" %}"></a></li>
+                        <li><a id="red_button" href="/"><img src="{% static "img/button/red.png" %}"></a></li>
                     </ul>
                     <ul class="right">
                         {% if username %}
@@ -61,7 +47,7 @@
                     </ul>
                 </section>
             </div>
-            <div class="row" style="padding: 70px 0 0 0">
+            <div class="row" style="padding: 70px 0 0 50px">
             {% block article %}{% endblock %}
             {% block login %}{% endblock %}
             </div>
