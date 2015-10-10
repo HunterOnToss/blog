@@ -9,9 +9,9 @@
     <h4>{{ article.article_date }}</h4>
 <hr>
     <div class="large-offset-1 large-8 columns">
-    <p>Коментарии:</p>
+    <p id="my_comments">Коментарии:</p>
     {% for comment in comments %}
-        <p>{{ comment.comments_text }}</p>
+        <p id="my_comments">{{ comment.comments_text }}</p>
     {% endfor %}
     <p id="talk"></p>
     {% if username %}
