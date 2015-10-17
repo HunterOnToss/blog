@@ -11,6 +11,7 @@ from django.core.paginator import Paginator
 from django.contrib import auth
 import json
 
+
 def template_two(request):
     view = "template_two"
     t = get_template("my_view.html")
@@ -40,31 +41,6 @@ def article(request, article_id=1):
     args["form"] = comment_form
     args["username"] = auth.get_user(request).username
     return render_to_response("article.html", args)
-
-
-def add_like(request, article_id):
-    id_session = 'has_commented' + str(article_id)
-    if request.method == "POST":
-        article = Article.objects.get(id=article_id)
-        if not request.session.get(id_session, False):
-            article.article_likes += 1
-            article.save()
-            response_data = {"like": article.article_likes, "art_id" : article_id}
-            response = HttpResponse(json.dumps(response_data), content_type="application/json")
-            request.session[id_session] = True
-        else:
-            article.article_likes -= 1
-            article.save()
-            response_data = {"like": article.article_likes, "art_id" : article_id}
-            response = HttpResponse(json.dumps(response_data), content_type="application/json")
-            request.session[id_session] = False
-
-        return response
-
-    return HttpResponse(
-            json.dumps({"fail": "true"}),
-            content_type="application/json"
-        )
 
 
 def add_comment(request, article_id):

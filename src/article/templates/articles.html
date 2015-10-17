@@ -8,10 +8,6 @@
         {% for img in article.images_set.values %}
             <p><img src="/media/{{ img.values|first  }}"  width="150px" height="100px"></p>
         {% endfor %}
-        <p id="{{ article.id }}"  style="display: inline-block;"><a id="like" href="/articles/add_like/{{ article.id }}/">
-            <img src="{% static "like.png" %}" width="45px" height="30px"></a>
-        </p>
-        <div id="{{ article.id }}likes" style="display: inline-block; color: green">{{ article.article_likes }}</div>
         <h6>Дата публикации: {{ article.article_date }}</h6>
         <hr>
     {% endfor %}
