@@ -13,6 +13,7 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates/'),
     os.path.join(BASE_DIR, 'article/templates/'),
     os.path.join(BASE_DIR, 'login_sys/templates/'),
+    os.path.join(BASE_DIR, 'learn/templates/'),
 )
 # Application definition
 

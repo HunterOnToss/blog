@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^basicview/', include('article.urls')),
     url(r'^auth/', include('login_sys.urls')),
     url(r'^', include('article.urls')),
+    url(r'^', include('learn.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns() + static(
