@@ -62,11 +62,13 @@ $(document).ready(function(){
         var t = new Trianglify(ops);
         var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
         document.body.setAttribute('style', 'background: '+pattern.dataUrl + ' center top fixed no-repeat;');
-        //$("p").css("color", "#000000");
-        //$("h6").css("color", "#1090C7");
-        //$("h4").css("color", "#1090C7");
-        //$("h2").css("color", "#5245DE");
-        //$("a").css("color", "#1908D1");
+        $("#my_article").css("background", "None");
+        $("p").css("color", "#000000");
+        $("h6").css("color", "#1090C7");
+        $("h4").css("color", "#1090C7");
+        $("h2").css("color", "#5245DE");
+        $("a").css("color", "#1908D1");
+        $("label").css("color", "#1908D1");
     });
 
 
