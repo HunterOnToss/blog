@@ -110,7 +110,7 @@ function create_post(l) {
 
         success : function(json) {
             $('#post-text').val(''); // remove the value from the input
-             $("#talk").append("<p>"+json.text+"</p>");
+             $("#talk").append('<p style="' + 'color: #D60909">'+json.text+"</p>");
         },
 
         error : function(xhr,errmsg,err) {
