@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^auth/', include('login_sys.urls')),
     url(r'^', include('article.urls')),
     url(r'^', include('learn.urls')),
+    url(r'^polls/', include('polls.urls', namespace="polls")),
 )
 
 urlpatterns += staticfiles_urlpatterns() + static(
