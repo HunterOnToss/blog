@@ -2,7 +2,7 @@
 from django.test import TestCase
 import datetime
 from django.utils import timezone
-from polls.models import Poll
+from polls.models import Poll, Choice
 from django.core.urlresolvers import reverse
 
 
@@ -14,6 +14,19 @@ def create_poll(question, days):
     """
     return Poll.objects.create(question=question,
                                pub_date=timezone.now() + datetime.timedelta(days=days))
+
+
+def create_choice(choice_text, votes, poll):
+    return Choice.objects.create(poll=poll, choice_text=choice_text, votes=votes)
+
+
+class PollWithChoices(TestCase):
+    def test_poll_with_exist_choices(self):
+        poll = create_poll(question="Hello, this test case", days=-2)
+        create_choice("Yes", 15, poll)
+        create_choice("No", 15, poll)
+        response = self.client.get(reverse("polls:index", args=(poll.id,)))
+        self.assertEqual(response.status_code, 404)
 
 
 class PollResultsViewTests(TestCase):
