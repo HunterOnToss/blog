@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.test import TestCase
 import datetime
 from django.utils import timezone
@@ -13,6 +14,22 @@ def create_poll(question, days):
     """
     return Poll.objects.create(question=question,
                                pub_date=timezone.now() + datetime.timedelta(days=days))
+
+
+class PollResultsViewTests(TestCase):
+    def test_result_view_with_a_future_poll(self):
+        u"""
+        Создаем вопроc, и публикуем его в будующем, в результат когда мы захоти обратиться к
+        ResultView мы должны получить 404 ошибку
+        """
+        future_poll = create_poll(question="Question from future", days=5)
+        response = self.client.get(reverse("polls:results", args=(future_poll.id,)))
+        self.assertEqual(response.status_code, 404)
+
+    def test_result_view_with_a_past_poll(self):
+        past_poll = create_poll(question="Long time ago", days=-5)
+        response = self.client.get(reverse("polls:results", args=(past_poll.id,)))
+        self.assertContains(response, past_poll.question, status_code=200)
 
 
 class PollIndexDetailTests(TestCase):

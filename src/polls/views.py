@@ -30,6 +30,9 @@ class ResultsView(generic.DetailView):
     model = Poll
     template_name = "polls/result.html"
 
+    def get_queryset(self):
+        return Poll.objects.filter(pub_date__lte=timezone.now())
+
 
 def vote(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
