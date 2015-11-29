@@ -21,6 +21,178 @@
         height: 768px;
         width: 1024px;
     }
+
+    .rad {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+
+    .rad_2 {
+        position: absolute;
+        top: 150px;
+        left: 10px;
+    }
+
+    .rad_3 {
+        position: absolute;
+        top: 300px;
+        left: 10px;
+    }
+
+    .rad_4 {
+        position: absolute;
+        top: 450px;
+        left: 10px;
+    }
+
+    .rad_5 {
+        position: absolute;
+        top: 600px;
+        left: 10px;
+    }
+    .icon {
+        height: 112px;
+        width: 112px;
+        position: absolute;
+    }
+
+    .icon {
+        background: url(../img/images/icons/Clock.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 70px;
+    }
+
+    .one {
+        background: url(../img/images/icons/App%20Store.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 268px;
+    }
+
+    .two {
+        background: url(../img/images/icons/iTunes%20Store.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 448px;
+    }
+
+    .three {
+        background: url(../img/images/icons/Calculator.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 628px;
+
+    }
+
+    .four {
+        background: url(../img/images/icons/Doo.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 808px;
+    }
+
+    #second_icon_one {
+        background: url(../img/images/icons/FontExplorer%20X.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_two {
+        background: url(../img/images/icons/Finder.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_three {
+        background: url(../img/images/icons/Game%20Center%20alt2.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_four {
+        background: url(../img/images/icons/InDesign.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_five {
+        background: url(../img/images/icons/Illustrator.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_one {
+        background: url(../img/images/icons/Idea%20Stuff.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_two {
+        background: url(../img/images/icons/Game%20Center%20alt4.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_three {
+        background: url(../img/images/icons/Mail.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_four {
+        background: url(../img/images/icons/Music.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_five {
+        background: url(../img/images/icons/Notes.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_one {
+        background: url(../img/images/icons/Videos.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_two {
+        background: url(../img/images/icons/Weather.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_three {
+        background: url(../img/images/icons/Users.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_four {
+        background: url(../img/images/icons/Safari.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_five {
+        background: url(../img/images/icons/Trash%20Full.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_one {
+        background: url(../img/images/icons/Passbook.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_two {
+        background: url(../img/images/icons/Stocks.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_three {
+        background: url(../img/images/icons/Smart.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_four {
+        background: url(../img/images/icons/RSS%20Notifier.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_five {
+        background: url(../img/images/icons/Phone.png);
+        background-size: 100% 100%;
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -38,6 +210,11 @@
         left: 242px;
         height: 1024px;
         width: 768px;
+    }
+
+    .container .icon {
+        background: url(../img/images/icons/App%20Store.png);
+        background-size: 100% 100%;
     }
 
 }
