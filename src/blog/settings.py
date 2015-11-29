@@ -14,6 +14,7 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'article/templates/'),
     os.path.join(BASE_DIR, 'login_sys/templates/'),
     os.path.join(BASE_DIR, 'learn/templates/'),
+    os.path.join(BASE_DIR, 'adapt_ipad_iphone/templates/'),
 )
 # Application definition
 

@@ -19,6 +19,10 @@ def template_two(request):
     return HttpResponse(html)
 
 
+def cross_browser(request):
+    return render_to_response("cross_browser.html")
+
+
 def resume(request):
     view = "resume"
     return render_to_response("resume.html", {"name": view})
