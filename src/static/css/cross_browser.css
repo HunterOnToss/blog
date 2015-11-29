@@ -399,18 +399,19 @@
 @media only screen and (min-width: 568px) and (max-width: 768px) {
     .back_main {
         background: url(../img/images/iphone5-horizontal.png) no-repeat;
-        width: 1800px;
-        height: 1000px;
+        background-size: 100% 100%;
+        width: 900px;
+        height: 500px;
     }
 
     .container {
         background: url(../img/images/background.jpg);
         background-size: 100% 100%;
         position: absolute;
-        top: 182px;
-        left: 328px;
-        height: 640px;
-        width: 1136px;
+        top: 91px;
+        left: 164px;
+        height: 320px;
+        width: 568px;
     }
 }
 
