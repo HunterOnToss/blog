@@ -46,6 +46,28 @@
         left: 10px;
     }
 
+    .switcher {
+        position: absolute;
+        /*position: relative;*/
+        top: 600px;
+        left: 500px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .switcher * {
+        transition: all .2s;
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        -ms-transition: all .2s;
+    }
+
+    .switcher input.switcher-value:checked ~ #sixth_icon_one {
+        background: url(../img/images/icons/Misc%20Designs%2001.png);
+        background-size: 100% 100%;
+        position: absolute;
+    }
+
     .rad_5 {
         position: absolute;
         top: 620px;
