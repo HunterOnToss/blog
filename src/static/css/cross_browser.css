@@ -4,14 +4,48 @@
     margin: 0;
 }
 
-input.switcher-value:checked ~ .rad > .icon {
+/* Change icons */
+input.switcher-value:checked ~ .container > .rad > .icon {
     background: url(../img/images/icons/Misc%20Designs%2001.png);
     background-size: 100% 100%;
     position: absolute;
 }
 
-input.switcher-value:checked ~ .rad > .one {
+input.switcher-value:checked ~ .container > .rad > .one {
     background: url(../img/images/icons/Clock.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad > .two {
+    background: url(../img/images/icons/Safari.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad > .three {
+    background: url(../img/images/icons/Stocks.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad > .four {
+    background: url(../img/images/icons/Trash%20Empty.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_2 > .icon {
+    background: url(../img/images/icons/Reminders.png);
+    background-size: 100% 100%;
+    /*position: absolute;*/
+    /*background-color: #1a1a1a;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+}
+
+input.switcher-value:checked ~ .container + .rad_2 > .one {
+    background: url(../img/images/icons/Weather.png);
     background-size: 100% 100%;
     position: absolute;
 }
@@ -33,6 +67,12 @@ input.switcher-value:checked ~ .rad > .one {
         left: 231px;
         height: 768px;
         width: 1024px;
+    }
+
+    .switcher-value {
+        position: absolute;
+        top: 100px;
+        left: 100px;
     }
 
     .rad {
