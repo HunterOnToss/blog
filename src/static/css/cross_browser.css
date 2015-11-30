@@ -35,7 +35,7 @@ input.switcher-value:checked ~ .container > .rad > .four {
     position: absolute;
 }
 
-input.switcher-value:checked ~ .container > .rad_2 > .icon {
+input.switcher-value:checked ~ .container > .rad_2 > #second_icon_one {
     background: url(../img/images/icons/Reminders.png);
     background-size: 100% 100%;
     /*position: absolute;*/
