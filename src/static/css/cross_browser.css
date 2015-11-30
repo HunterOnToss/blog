@@ -48,8 +48,8 @@
 
     .rad_5 {
         position: absolute;
-        top: 600px;
-        left: 10px;
+        top: 620px;
+        left: 100px;
     }
 
     .rad_6 {
@@ -176,26 +176,36 @@
     #fifth_icon_one {
         background: url(../img/images/icons/Passbook.png);
         background-size: 100% 100%;
+        height: 96px;
+        width: 96px;
     }
 
     #fifth_icon_two {
         background: url(../img/images/icons/Stocks.png);
         background-size: 100% 100%;
+        height: 96px;
+        width: 96px;
     }
 
     #fifth_icon_three {
         background: url(../img/images/icons/Smart.png);
         background-size: 100% 100%;
+        height: 96px;
+        width: 96px;
     }
 
     #fifth_icon_four {
         background: url(../img/images/icons/RSS%20Notifier.png);
         background-size: 100% 100%;
+        height: 96px;
+        width: 96px;
     }
 
     #fifth_icon_five {
         background: url(../img/images/icons/Phone.png);
         background-size: 100% 100%;
+        visibility: hidden;
+
     }
 
 }
@@ -244,7 +254,7 @@
 
     .rad_6 {
         position: absolute;
-        top: 770px;
+        top: 850px;
     }
 
     .icon {
