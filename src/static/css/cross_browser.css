@@ -47,6 +47,205 @@ input.switcher-value:checked ~ .container > .rad_2 > #second_icon_two {
     position: absolute;
 }
 
+input.switcher-value:checked ~ .container > .rad_2 > #second_icon_three {
+    background: url(../img/images/icons/Compass.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_2 > #second_icon_four {
+    background: url(../img/images/icons/Cobook.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_2 > #second_icon_five {
+    background: url(../img/images/icons/CandyBar.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_3 > #third_icon_one {
+    background: url(../img/images/icons/Downloads.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_3 > #third_icon_two {
+    background: url(../img/images/icons/Idea%20Stuff.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_3 > #third_icon_three {
+    background: url(../img/images/icons/Gemini.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_3 > #third_icon_four {
+    background: url(../img/images/icons/Illustrator.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_3 > #third_icon_five {
+    background: url(../img/images/icons/Monosnap.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_4 > #fourth_icon_one {
+    background: url(../img/images/icons/Newsstand.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_4 > #fourth_icon_two {
+    background: url(../img/images/icons/Notes.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_4 > #fourth_icon_three {
+    background: url(../img/images/icons/Reminders.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_4 > #fourth_icon_four {
+    background: url(../img/images/icons/Internal.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_4 > #fourth_icon_five {
+    background: url(../img/images/icons/Messages.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+/* switch 3 */
+
+input.switcher-value-3:checked ~ .container > .rad > .icon {
+    background: url(../img/images/icons/Maps.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad > .one {
+    background: url(../img/images/icons/Library.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad > .two {
+    background: url(../img/images/icons/App%20Store.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad > .three {
+    background: url(../img/images/icons/Applicons.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad > .four {
+    background: url(../img/images/icons/Developer.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_2 > #second_icon_one {
+    background: url(../img/images/icons/EasyFind.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_2 > #second_icon_two {
+    background: url(../img/images/icons/Drop%20Stuff.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_2 > #second_icon_three {
+    background: url(../img/images/icons/Design%20Briefs.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_2 > #second_icon_four {
+    background: url(../img/images/icons/Weather.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_2 > #second_icon_five {
+    background: url(../img/images/icons/Users.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_3 > #third_icon_one {
+    background: url(../img/images/icons/Internal.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_3 > #third_icon_two {
+    background: url(../img/images/icons/Time%20Machine%20Disk.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_3 > #third_icon_three {
+    background: url(../img/images/icons/System.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_3 > #third_icon_four {
+    background: url(../img/images/icons/Illustrator.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_3 > #third_icon_five {
+    background: url(../img/images/icons/Safari.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_one {
+    background: url(../img/images/icons/Smart.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_two {
+    background: url(../img/images/icons/Music.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_three {
+    background: url(../img/images/icons/Trash%20Managed.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_four {
+    background: url(../img/images/icons/LaCie%20FA%20Porsche.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_five {
+    background: url(../img/images/icons/Photoshop.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
 /*iPad horizontal*/
 
 @media only screen and (min-width: 1024px) {
@@ -77,6 +276,13 @@ input.switcher-value:checked ~ .container > .rad_2 > #second_icon_two {
         position: absolute;
         top: 850px;
         left: 750px;
+        z-index: 1;
+    }
+
+    .switcher-value-3 {
+        position: absolute;
+        top: 850px;
+        left: 850px;
         z-index: 1;
     }
 
@@ -277,6 +483,27 @@ input.switcher-value:checked ~ .container > .rad_2 > #second_icon_two {
         width: 768px;
     }
 
+    .switcher-value {
+        position: absolute;
+        top: 1050px;
+        left: 650px;
+        z-index: 1;
+    }
+
+    .switcher-value-2 {
+        position: absolute;
+        top: 1050px;
+        left: 750px;
+        z-index: 1;
+    }
+
+    .switcher-value-3 {
+        position: absolute;
+        top: 1050px;
+        left: 850px;
+        z-index: 1;
+    }
+
     .rad {
         position: absolute;
         top: 45px;
@@ -474,6 +701,49 @@ input.switcher-value:checked ~ .container > .rad_2 > #second_icon_two {
         height: 640px;
         width: 1136px;
     }
+
+    .switcher-value {
+        position: absolute;
+        top: 1050px;
+        left: 650px;
+        z-index: 1;
+    }
+
+    .switcher-value-2 {
+        position: absolute;
+        top: 1050px;
+        left: 750px;
+        z-index: 1;
+    }
+
+    .switcher-value-3 {
+        position: absolute;
+        top: 1050px;
+        left: 850px;
+        z-index: 1;
+    }
+
+    .switcher-value {
+        position: absolute;
+        top: 620px;
+        left: 650px;
+        z-index: 1;
+    }
+
+    .switcher-value-2 {
+        position: absolute;
+        top: 620px;
+        left: 750px;
+        z-index: 1;
+    }
+
+    .switcher-value-3 {
+        position: absolute;
+        top: 620px;
+        left: 850px;
+        z-index: 1;
+    }
+
     .rad {
         position: absolute;
         top: 5px;
@@ -670,6 +940,27 @@ input.switcher-value:checked ~ .container > .rad_2 > #second_icon_two {
         left: 184px;
         height: 1136px;
         width: 640px;
+    }
+
+    .switcher-value {
+        position: absolute;
+        top: 1220px;
+        left: 350px;
+        z-index: 1;
+    }
+
+    .switcher-value-2 {
+        position: absolute;
+        top: 1220px;
+        left: 450px;
+        z-index: 1;
+    }
+
+    .switcher-value-3 {
+        position: absolute;
+        top: 1220px;
+        left: 550px;
+        z-index: 1;
     }
 
     .rad {
