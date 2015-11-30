@@ -1,13 +1,14 @@
+
 * {
     padding: 0;
     margin: 0;
 }
 
-
+/*iPad horizontal*/
 
 @media only screen and (min-width: 1024px) {
     .back_main {
-        background: url(../img/images/ipad-mini-horizontal.png) no-repeat;
+        background: url(../img/../img/images/ipad-mini-horizontal.png) no-repeat;
         width: 1500px;
         height: 1250px;
     }
@@ -46,32 +47,10 @@
         left: 10px;
     }
 
-    .switcher {
-        position: absolute;
-        /*position: relative;*/
-        top: 600px;
-        left: 500px;
-        cursor: pointer;
-        z-index: 1;
-    }
-    .switcher * {
-        transition: all .2s;
-        -moz-transition: all .2s;
-        -webkit-transition: all .2s;
-        -o-transition: all .2s;
-        -ms-transition: all .2s;
-    }
-
-    .switcher input.switcher-value:checked ~ #sixth_icon_one {
-        background: url(../img/images/icons/Misc%20Designs%2001.png);
-        background-size: 100% 100%;
-        position: absolute;
-    }
-
     .rad_5 {
         position: absolute;
         top: 620px;
-        left: 100px;
+        left: 90px;
     }
 
     .rad_6 {
@@ -79,8 +58,8 @@
     }
 
     .icon {
-        height: 112px;
-        width: 112px;
+        height: 100px;
+        width: 100px;
         position: absolute;
     }
 
@@ -198,39 +177,31 @@
     #fifth_icon_one {
         background: url(../img/images/icons/Passbook.png);
         background-size: 100% 100%;
-        height: 96px;
-        width: 96px;
     }
 
     #fifth_icon_two {
         background: url(../img/images/icons/Stocks.png);
         background-size: 100% 100%;
-        height: 96px;
-        width: 96px;
     }
 
     #fifth_icon_three {
         background: url(../img/images/icons/Smart.png);
         background-size: 100% 100%;
-        height: 96px;
-        width: 96px;
     }
 
     #fifth_icon_four {
         background: url(../img/images/icons/RSS%20Notifier.png);
         background-size: 100% 100%;
-        height: 96px;
-        width: 96px;
     }
 
     #fifth_icon_five {
         background: url(../img/images/icons/Phone.png);
         background-size: 100% 100%;
         visibility: hidden;
-
     }
-
 }
+
+/*iPad vertifical*/
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .back_main {
@@ -239,7 +210,7 @@
         height: 1500px;
     }
 
-     .container {
+    .container {
         background: url(../img/images/background.jpg);
         background-size: 100% 100%;
         position: absolute;
@@ -251,37 +222,37 @@
 
     .rad {
         position: absolute;
-        top: 25px;
+        top: 45px;
     }
 
     .rad_2 {
         position: absolute;
-        top: 170px;
+        top: 210px;
     }
 
     .rad_3 {
         position: absolute;
-        top: 320px;
+        top: 360px;
     }
 
     .rad_4 {
         position: absolute;
-        top: 470px;
+        top: 510px;
     }
 
     .rad_5 {
         position: absolute;
-        top: 620px;
+        top: 660px;
     }
 
     .rad_6 {
         position: absolute;
-        top: 850px;
+        top: 860px;
     }
 
     .icon {
-        height: 112px;
-        width: 112px;
+        height: 100px;
+        width: 100px;
         position: absolute;
     }
 
@@ -334,7 +305,7 @@
     }
 
     #second_icon_three {
-        background: url(../img/images/icons/Game%20Center%20alt2.png);
+        background: url(../img/images/icons/Photoshop.png);
         background-size: 100% 100%;
     }
 
@@ -407,26 +378,28 @@
 
 
     #sixth_icon_one {
-        background: url(../img/images/icons/Burnable.png);
+        background: url(../img/images/icons/Passbook.png);
         background-size: 100% 100%;
     }
 
     #sixth_icon_two {
-        background: url(../img/images/icons/Calendar%20-%20Blank.png);
+        background: url(../img/images/icons/Stocks.png);
         background-size: 100% 100%;
     }
 
     #sixth_icon_three {
-        background: url(../img/images/icons/Camera.png);
+        background: url(../img/images/icons/Smart.png);
         background-size: 100% 100%;
     }
 
     #sixth_icon_four {
-        background: url(../img/images/icons/Clock.png);
+        background: url(../img/images/icons/RSS%20Notifier.png);
         background-size: 100% 100%;
     }
 
 }
+
+/*iPhone5 horizontal*/
 
 @media only screen and (min-width: 568px) and (max-width: 768px) {
     .back_main {
@@ -444,7 +417,186 @@
         height: 640px;
         width: 1136px;
     }
+    .rad {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+
+    .rad_2 {
+        position: absolute;
+        top: 150px;
+        left: 10px;
+    }
+
+    .rad_3 {
+        position: absolute;
+        top: 300px;
+        left: 10px;
+    }
+
+    .rad_4 {
+        position: absolute;
+        top: 450px;
+        left: 100px;
+    }
+
+    .rad_5 {
+        *position: absolute;
+        top: 600px;
+        left: 10px;
+        visibility: hidden;
+    }
+
+    .rad_6 {
+        visibility: hidden;
+    }
+
+    .icon {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+    }
+
+    .icon {
+        background: url(../img/images/icons/Clock.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 80px;
+    }
+
+    .one {
+        background: url(../img/images/icons/App%20Store.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 288px;
+    }
+
+    .two {
+        background: url(../img/images/icons/iTunes%20Store.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 498px;
+    }
+
+    .three {
+        background: url(../img/images/icons/Calculator.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 708px;
+
+    }
+
+    .four {
+        background: url(../img/images/icons/Doo.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 928px;
+    }
+
+    #second_icon_one {
+        background: url(../img/images/icons/FontExplorer%20X.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_two {
+        background: url(../img/images/icons/Finder.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_three {
+        background: url(../img/images/icons/Game%20Center%20alt2.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_four {
+        background: url(../img/images/icons/InDesign.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_five {
+        background: url(../img/images/icons/Illustrator.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_one {
+        background: url(../img/images/icons/Idea%20Stuff.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_two {
+        background: url(../img/images/icons/Game%20Center%20alt4.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_three {
+        background: url(../img/images/icons/Mail.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_four {
+        background: url(../img/images/icons/Music.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_five {
+        background: url(../img/images/icons/Notes.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_one {
+        background: url(../img/images/icons/Videos.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_two {
+        background: url(../img/images/icons/Weather.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_three {
+        background: url(../img/images/icons/Users.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_four {
+        background: url(../img/images/icons/Safari.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_five {
+        background: url(../img/images/icons/Trash%20Full.png);
+        background-size: 100% 100%;
+        visibility: hidden;
+    }
+
+    #fifth_icon_one {
+        background: url(../img/images/icons/Passbook.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_two {
+        background: url(../img/images/icons/Stocks.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_three {
+        background: url(../img/images/icons/Smart.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_four {
+        background: url(../img/images/icons/RSS%20Notifier.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_five {
+        background: url(../img/images/icons/Phone.png);
+        background-size: 100% 100%;
+    }
 }
+
+/*iPhone5 vertical*/
 
 @media only screen and (min-width: 320px) and (max-width: 568px) {
     .back_main {
@@ -461,5 +613,180 @@
         left: 184px;
         height: 1136px;
         width: 640px;
+    }
+
+    .rad {
+        position: absolute;
+        top: 50px;
+    }
+
+    .rad_2 {
+        position: absolute;
+        top: 200px;
+    }
+
+    .rad_3 {
+        position: absolute;
+        top: 350px;
+    }
+
+    .rad_4 {
+        position: absolute;
+        top: 500px;
+    }
+
+    .rad_5 {
+        position: absolute;
+        top: 650px;
+    }
+
+    .rad_6 {
+        position: absolute;
+        top: 990px;
+    }
+
+    .icon {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+    }
+
+    .icon {
+        background: url(../img/images/icons/Maps.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 40px;
+    }
+
+    .one {
+        background: url(../img/images/icons/App%20Store.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 198px;
+    }
+
+    .two {
+        background: url(../img/images/icons/iTunes%20Store.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 358px;
+    }
+
+    .three {
+        background: url(../img/images/icons/Calculator.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 498px;
+
+    }
+
+    .four {
+        background: url(../img/images/icons/Library.png);
+        background-size: 100% 100%;
+        top: 24px;
+        left: 448px;
+        visibility: hidden;
+
+    }
+
+    #second_icon_one {
+        background: url(../img/images/icons/Monosnap.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_two {
+        background: url(../img/images/icons/Finder.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_three {
+        background: url(../img/images/icons/Photoshop.png);
+        background-size: 100% 100%;
+    }
+
+    #second_icon_four {
+        background: url(../img/images/icons/InDesign.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_one {
+        background: url(../img/images/icons/Idea%20Stuff.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_two {
+        background: url(../img/images/icons/Game%20Center%20alt4.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_three {
+        background: url(../img/images/icons/Mail.png);
+        background-size: 100% 100%;
+    }
+
+    #third_icon_four {
+        background: url(../img/images/icons/Music.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_one {
+        background: url(../img/images/icons/Videos.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_two {
+        background: url(../img/images/icons/Weather.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_three {
+        background: url(../img/images/icons/Users.png);
+        background-size: 100% 100%;
+    }
+
+    #fourth_icon_four {
+        background: url(../img/images/icons/Safari.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_one {
+        background: url(../img/images/icons/Passbook.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_two {
+        background: url(../img/images/icons/Stocks.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_three {
+        background: url(../img/images/icons/Smart.png);
+        background-size: 100% 100%;
+    }
+
+    #fifth_icon_four {
+        background: url(../img/images/icons/RSS%20Notifier.png);
+        background-size: 100% 100%;
+    }
+
+
+    #sixth_icon_one {
+        background: url(../img/images/icons/Passbook.png);
+        background-size: 100% 100%;
+    }
+
+    #sixth_icon_two {
+        background: url(../img/images/icons/Stocks.png);
+        background-size: 100% 100%;
+    }
+
+    #sixth_icon_three {
+        background: url(../img/images/icons/Smart.png);
+        background-size: 100% 100%;
+    }
+
+    #sixth_icon_four {
+        background: url(../img/images/icons/RSS%20Notifier.png);
+        background-size: 100% 100%;
     }
 }
