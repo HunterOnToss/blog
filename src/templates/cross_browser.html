@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cross</title>
     <link rel="stylesheet" type="text/css" href="../static/css/cross_browser.css" media="screen">
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".icon").click(function(){
+                var back = $(this).css("background");
+                PopUpShow(back);
+            });
+        });
+
+        function PopUpShow(image){
+            $("#popup1").show().css('background', image);
+        }
+
+        function PopUpHide(){
+            $("#popup1").hide();
+        }
+    </script>
 </head>
 <body>
 <div class="back_main">
-<input type="radio" name="group" class="switcher-value" checked>
-<input type="radio" name="group" class="switcher-value-2">
-<input type="radio" name="group" class="switcher-value-3">
+<input type="radio" name="group" class="switcher-value" checked title="">
+<input type="radio" name="group" class="switcher-value-2" title="">
+<input type="radio" name="group" class="switcher-value-3" title="">
     <div class="container">
+        <div class="b-popup" id="popup1" onclick="javascript:PopUpHide()"></div>
         <div class="rad">
             <div class="icon"></div>
             <div class="icon one"></div>

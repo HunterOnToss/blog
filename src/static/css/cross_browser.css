@@ -4,6 +4,16 @@
     margin: 0;
 }
 
+.b-popup{
+    width:64px;
+    min-height:64px;
+    overflow:hidden;
+    position:fixed;
+    top: 500px;
+    left: 0;
+    z-index: 2;
+}
+
 /* Change icons */
 input.switcher-value:checked ~ .container > .rad > .icon {
     background: url(../img/images/icons/Misc%20Designs%2001.png);
