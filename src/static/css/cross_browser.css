@@ -5,11 +5,11 @@
 }
 
 .b-popup{
-    width:64px;
-    min-height:64px;
+    width:0;
+    min-height:0;
     overflow:hidden;
-    position:fixed;
-    top: 500px;
+    position: absolute;
+    top: 0;
     left: 0;
     z-index: 2;
 }
