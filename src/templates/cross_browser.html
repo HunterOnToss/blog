@@ -5,23 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cross</title>
     <link rel="stylesheet" type="text/css" href="../static/css/cross_browser.css" media="screen">
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".icon").click(function(){
-                var back = $(this).css("background");
-                PopUpShow(back);
-            });
-        });
-
-        function PopUpShow(image){
-            $("#popup1").show().css('background', image);
-        }
-
-        function PopUpHide(){
-            $("#popup1").hide();
-        }
-    </script>
+    <script src="../static/js/libs/jquery-1.11.3.min.js"></script>
+    <script src="../static/js/cross.js"></script>
 </head>
 <body>
 <div class="back_main">
