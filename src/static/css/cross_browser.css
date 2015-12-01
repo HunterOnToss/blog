@@ -520,11 +520,6 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
         background-size: 100% 100%;
     }
 
-    /*#fifth_icon_five {*/
-        /*background: url(../img/images/icons/Phone.png);*/
-        /*background-size: 100% 100%;*/
-        /*visibility: hidden;*/
-    /*}*/
 }
 
 /*iPad vertifical*/
@@ -549,21 +544,21 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
     .switcher-value {
         position: absolute;
         top: 1050px;
-        left: 650px;
+        left: 550px;
         z-index: 1;
     }
 
     .switcher-value-2 {
         position: absolute;
         top: 1050px;
-        left: 750px;
+        left: 650px;
         z-index: 1;
     }
 
     .switcher-value-3 {
         position: absolute;
         top: 1050px;
-        left: 850px;
+        left: 750px;
         z-index: 1;
     }
 
@@ -767,43 +762,22 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
 
     .switcher-value {
         position: absolute;
-        top: 1050px;
-        left: 650px;
+        top: 650px;
+        left: 770px;
         z-index: 1;
     }
 
     .switcher-value-2 {
         position: absolute;
-        top: 1050px;
-        left: 750px;
+        top: 650px;
+        left: 870px;
         z-index: 1;
     }
 
     .switcher-value-3 {
         position: absolute;
-        top: 1050px;
-        left: 850px;
-        z-index: 1;
-    }
-
-    .switcher-value {
-        position: absolute;
-        top: 620px;
-        left: 650px;
-        z-index: 1;
-    }
-
-    .switcher-value-2 {
-        position: absolute;
-        top: 620px;
-        left: 750px;
-        z-index: 1;
-    }
-
-    .switcher-value-3 {
-        position: absolute;
-        top: 620px;
-        left: 850px;
+        top: 650px;
+        left: 970px;
         z-index: 1;
     }
 
@@ -815,36 +789,36 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
 
     .rad_2 {
         position: absolute;
-        top: 150px;
+        top: 100px;
         left: 10px;
     }
 
     .rad_3 {
         position: absolute;
-        top: 300px;
+        top: 200px;
         left: 10px;
     }
 
     .rad_4 {
         position: absolute;
-        top: 450px;
-        left: 100px;
+        top: 300px;
+        left: 10px;
     }
 
     .rad_5 {
-        *position: absolute;
-        top: 600px;
-        left: 10px;
         visibility: hidden;
     }
 
     .rad_6 {
-        visibility: hidden;
+        position: absolute;
+        top: 500px;
+        left: 110px;
+
     }
 
     .icon {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
         position: absolute;
     }
 
@@ -957,7 +931,7 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
     #fourth_icon_five {
         background: url(../img/images/icons/Trash%20Full.png);
         background-size: 100% 100%;
-        visibility: hidden;
+        /*visibility: hidden;*/
     }
 
     #fifth_icon_one {
