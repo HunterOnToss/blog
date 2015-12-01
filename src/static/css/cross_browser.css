@@ -1008,21 +1008,21 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
     .switcher-value {
         position: absolute;
         top: 1220px;
-        left: 350px;
+        left: 400px;
         z-index: 1;
     }
 
     .switcher-value-2 {
         position: absolute;
         top: 1220px;
-        left: 450px;
+        left: 500px;
         z-index: 1;
     }
 
     .switcher-value-3 {
         position: absolute;
         top: 1220px;
-        left: 550px;
+        left: 600px;
         z-index: 1;
     }
 
@@ -1053,7 +1053,7 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
 
     .rad_6 {
         position: absolute;
-        top: 990px;
+        top: 950px;
     }
 
     .icon {
