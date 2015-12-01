@@ -125,6 +125,36 @@ input.switcher-value:checked ~ .container > .rad_4 > #fourth_icon_five {
     position: absolute;
 }
 
+input.switcher-value:checked ~ .container > .rad_5 > #fifth_icon_one {
+    background: url(../img/images/icons/Design%20Briefs.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_5 > #fifth_icon_two {
+    background: url(../img/images/icons/Finder.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_5 > #fifth_icon_three {
+    background: url(../img/images/icons/Camera.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_5 > #fifth_icon_four {
+    background: url(../img/images/icons/FaceTime.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value:checked ~ .container > .rad_5 > #fifth_icon_five {
+    background: url(../img/images/icons/Dictionary.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
 /* switch 3 */
 
 input.switcher-value-3:checked ~ .container > .rad > .icon {
@@ -246,6 +276,36 @@ input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_five {
     background-size: 100% 100%;
     position: absolute;
 }
+
+input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_one {
+    background: url(../img/images/icons/Idea%20Stuff%202.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_two {
+    background: url(../img/images/icons/Cobook.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_three {
+    background: url(../img/images/icons/Burnable.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_four {
+    background: url(../img/images/icons/Applicons.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
+    background: url(../img/images/icons/App%20Store.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
 /*iPad horizontal*/
 
 @media only screen and (min-width: 1024px) {
@@ -314,10 +374,13 @@ input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_five {
         position: absolute;
         top: 620px;
         left: 90px;
+        visibility: hidden;
     }
 
     .rad_6 {
-        visibility: hidden;
+        position: absolute;
+        top: 620px;
+        left: 90px;
     }
 
     .icon {
@@ -437,31 +500,31 @@ input.switcher-value-3:checked ~ .container > .rad_4 > #fourth_icon_five {
         background-size: 100% 100%;
     }
 
-    #fifth_icon_one {
+    #sixth_icon_one {
         background: url(../img/images/icons/Passbook.png);
         background-size: 100% 100%;
     }
 
-    #fifth_icon_two {
+    #sixth_icon_two {
         background: url(../img/images/icons/Stocks.png);
         background-size: 100% 100%;
     }
 
-    #fifth_icon_three {
+    #sixth_icon_three {
         background: url(../img/images/icons/Smart.png);
         background-size: 100% 100%;
     }
 
-    #fifth_icon_four {
+    #sixth_icon_four {
         background: url(../img/images/icons/RSS%20Notifier.png);
         background-size: 100% 100%;
     }
 
-    #fifth_icon_five {
-        background: url(../img/images/icons/Phone.png);
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
+    /*#fifth_icon_five {*/
+        /*background: url(../img/images/icons/Phone.png);*/
+        /*background-size: 100% 100%;*/
+        /*visibility: hidden;*/
+    /*}*/
 }
 
 /*iPad vertifical*/
