@@ -9,9 +9,9 @@
         <script src="{% static "js/libs/jquery-1.11.3.min.js" %}"></script>
         <script src="{% static "js/libs/main.js" %}"></script>
         <script src="{% static "comment.js" %}"></script>
-         <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
-    <script type="text/javascript">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
+        <script type="text/javascript">
         $(document).ready(function(){
             $("a#clickme").click(function(event) {
                 event.preventDefault();
@@ -22,6 +22,22 @@
                     dataType: "json",
                     success: $("a#clickme").replaceWith('<a href="/auth/login/">' +
                         '<img src="{% static "img/button/enter.png" %}"></a></li>')
+                });
+            });
+            $("a#polls").click(function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: "/polls/",
+                    type: "GET",
+                    data: "",
+                    dataType: "json",
+                    success: function(json) {
+                        var div_with_polls = $('#poll_list');
+                        div_with_polls.empty();
+                        json.forEach(function(item){
+                            div_with_polls.append('<li><a href="'+ 'polls/' + item.pk + '"' + '>' + item.fields.question +'</a></li>');
+                        });
+                    }
                 });
             });
         });
@@ -49,6 +65,10 @@
                 </section>
             </div>
             <div class="row" id="my_article">
+                <a id="polls">Опрос</a>
+                <div id="poll_list">
+                </div>
+            <hr>
             {% block article %}{% endblock %}
             {% block login %}{% endblock %}
             </div>

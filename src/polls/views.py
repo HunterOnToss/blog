@@ -1,12 +1,28 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404, HttpResponse
 from polls.models import Choice, Poll
 from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
+from django.core import serializers
 
 
-class IndexView(generic.ListView):
+class AJAXListMixin(object):
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.is_ajax():
+            raise Http404("This is an ajax view, friend.")
+
+        return super(AJAXListMixin, self).dispatch(request, *args, **kwargs)
+
+    def get_queryset(self):
+        return super(AJAXListMixin, self).get_queryset()
+
+    def get(self, request, *args, **kwargs):
+        return HttpResponse(serializers.serialize('json', self.get_queryset()))
+
+
+class IndexView(AJAXListMixin, generic.ListView):
     template_name = "polls/main.html"
     context_object_name = 'latest_poll_list'
 
