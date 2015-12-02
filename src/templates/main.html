@@ -69,6 +69,11 @@
         a:hover {
             color: #E1E80E;
         }
+
+        .main_icon {
+            width: 50px;
+            height: 50px;
+        }
     </style>
     </head>
         <body>
@@ -76,6 +81,7 @@
                 <section class="top-bar-section">
                     <ul class="left">
                         <li><a id="red_button" href="/"><img src="{% static "img/button/red.png" %}"></a></li>
+                        <li><a href="/cross_browser/"><img class="main_icon" src="{% static "img/button/iPhone-icon.png" %}"></a></li>
                     </ul>
                     <ul class="right">
                         <li><a href="/learn/"><img src="{% static "img/button/learn.png" %}"></a></li>
@@ -85,7 +91,6 @@
                             <li><a href="/auth/login/"><img src="{% static "img/button/enter.png" %}"></a></li>
                         {% endif %}
                         <li><a href="/resume/"><img src="{% static "img/button/resume.png" %}"></a></li>
-                        <li><a href="/cross_browser/"><img src="{% static "" %}"></a></li>
                         <li>
                             <a href="/"><img src="{% static "img/button/my_blog.png" %}"></a>
                         </li>
