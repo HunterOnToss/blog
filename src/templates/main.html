@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>My Blog</title>
         <link rel="stylesheet" type="text/css" href="{% static "css/foundation.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/top_menu.css" %}">
         <script src="{% static "js/libs/jquery-1.11.3.min.js" %}"></script>
         <script src="{% static "js/libs/main.js" %}"></script>
         <script src="{% static "comment.js" %}"></script>
@@ -23,76 +24,26 @@
                         '<img src="{% static "img/button/enter.png" %}"></a></li>')
                 });
             });
-
-            });
+        });
     </script>
-    <style>
-        body {
-            background:  url({% static "img/fon/golden_armada/gold_armada_fon.jpg" %}) center top fixed no-repeat;
-            background-size: 100% 100%;
-        }
-        #my_article {
-            padding: 70px 20px 0 50px;
-            background: url({% static "img/fon/wallpaper-dark.jpg" %}) center top fixed no-repeat;
-        }
-
-        #my_top_bar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 50px;
-        }
-        label {
-            color: #E1E80E;
-        }
-        p {
-            color: #E1E80E;
-        }
-        h2{
-            color: #41C221;
-        }
-        h4 {
-            color: #4ADDED;
-        }
-
-
-        h6 {
-            color: #4AEDDD;
-        }
-
-        #my_comments {
-            color: #E1E80E;
-        }
-        a {
-            color: orangered;
-        }
-        a:hover {
-            color: #E1E80E;
-        }
-
-        .main_icon {
-            width: 50px;
-            height: 50px;
-        }
-    </style>
     </head>
         <body>
             <div class="top-bar" id="my_top_bar">
                 <section class="top-bar-section">
                     <ul class="left">
-                        <li><a id="red_button" href="/"><img src="{% static "img/button/red.png" %}"></a></li>
-                        <li><a href="/cross_browser/"><img class="main_icon" src="{% static "img/button/iPhone-icon.png" %}"></a></li>
+                        <li><a id="red_button" href="/"><img id="red_button" src="{% static "img/button/red.png" %}"></a></li>
+                        <li><a href="/cross_browser/"><img id="iphone" src="{% static "img/button/iPhone-icon.png" %}"></a></li>
                     </ul>
                     <ul class="right">
-                        <li><a href="/learn/"><img src="{% static "img/button/learn.png" %}"></a></li>
+                        <li><a href="/learn/"><img class="main_icon" src="{% static "img/button/learn.png" %}"></a></li>
                         {% if username %}
-                            <li ><a id="clickme" href="/auth/logout/"><img src="{% static "img/button/exit.png" %}"></a></li>
+                            <li ><a id="clickme" href="/auth/logout/"><img class="main_icon" src="{% static "img/button/exit.png" %}"></a></li>
                         {% else %}
-                            <li><a href="/auth/login/"><img src="{% static "img/button/enter.png" %}"></a></li>
+                            <li><a href="/auth/login/"><img class="main_icon" src="{% static "img/button/enter.png" %}"></a></li>
                         {% endif %}
-                        <li><a href="/resume/"><img src="{% static "img/button/resume.png" %}"></a></li>
+                        <li><a href="/resume/"><img class="main_icon" src="{% static "img/button/resume.png" %}"></a></li>
                         <li>
-                            <a href="/"><img src="{% static "img/button/my_blog.png" %}"></a>
+                            <a href="/"><img class="main_icon" src="{% static "img/button/my_blog.png" %}"></a>
                         </li>
                     </ul>
                 </section>
