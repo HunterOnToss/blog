@@ -319,6 +319,14 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
 /*iPad horizontal*/
 
 @media only screen and (min-width: 1024px) {
+    .home_button {
+        opacity: 0;
+        position: absolute;
+        top: 610px;
+        left: 1300px;
+        z-index: 10;
+    }
+
     .back_main {
         background: url(../img/../img/images/ipad-mini-horizontal.png) no-repeat;
         width: 1500px;
@@ -535,6 +543,13 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
 /*iPad vertifical*/
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .home_button {
+        opacity: 0;
+        position: absolute;
+        top: 1310px;
+        left: 610px;
+        z-index: 10;
+    }
     .back_main {
         background: url(../img/images/ipad-mini-vertifical.png) no-repeat;
         width: 1250px;
@@ -754,6 +769,15 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
 /*iPhone5 horizontal*/
 
 @media only screen and (min-width: 568px) and (max-width: 768px) {
+    .home_button {
+        font-size: 60px;
+        opacity: 0;
+        position: absolute;
+        top: 470px;
+        left: 1510px;
+        z-index: 10;
+    }
+
     .back_main {
         background: url(../img/images/iphone5-horizontal.png) no-repeat;
         width: 1800px;
@@ -973,6 +997,15 @@ input.switcher-value-3:checked ~ .container > .rad_5 > #fifth_icon_five {
 /*iPhone5 vertical*/
 
 @media only screen and (min-width: 320px) and (max-width: 568px) {
+    .home_button {
+        font-size: 54px;
+        opacity: 0;
+        position: absolute;
+        top: 1550px;
+        left: 440px;
+        z-index: 10;
+    }
+
     .back_main {
         background: url(../img/images/iphone5-vertical.png) no-repeat;
         width: 1000px;
