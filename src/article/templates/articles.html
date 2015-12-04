@@ -2,6 +2,10 @@
 {% load staticfiles  %}
 
 {% block article %}
+    <a id="polls">Опрос</a>
+                <div id="poll_list">
+                </div>
+                <hr>
     <div>
     {% for article in articles %}
         <h4><a href="/articles/get/{{ article.id }}">{{ article.article_title }}</a></h4>
