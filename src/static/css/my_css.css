@@ -13,7 +13,7 @@ body {
 
 #left_panel {
     float: left;
-    padding: 40px 50px 70px 55px;
+    padding: 40px 50px 100px 55px;
     background-color: #b9b9b9;
 
 }
@@ -67,9 +67,31 @@ a:visited {
     top: 0;
     width: 120px;
     height: 50px;
+    z-index: 99;
 }
 
 .top-bar img {
     width: 120px;
     height: 50px;
+}
+
+@media (max-width: 1400px)  {
+
+    #left_panel {
+        background-color: #b9b9b9;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        height: 1920px;
+        width: 300px;
+}
+
+    #center_panel {
+        /*background-color: red;*/
+        position: absolute;
+        top: 50px;
+        left: 410px;
+        height: 1920px;
+        width: 700px;
+    }
 }
