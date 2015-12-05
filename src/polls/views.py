@@ -38,6 +38,19 @@ class ResultsView(generic.DetailView):
         return Poll.objects.filter(pub_date__lte=timezone.now())
 
 
+def result_view(request, pk):
+    if request.method == "POST":
+        poll = Poll.objects.get(pk=pk)
+
+        args = {}
+        args.update(csrf(request))
+        args["poll"] = poll
+
+        t = get_template("polls/result.html")
+        html = t.render(Context(args))
+        return HttpResponse(json.dumps(html), content_type="applecation/json")
+
+
 def detail_view(request, pk):
     if request.method == "POST":
         poll = Poll.objects.get(pk=pk)
@@ -52,15 +65,21 @@ def detail_view(request, pk):
 
 
 def vote(request, poll_id):
-    p = get_object_or_404(Poll, pk=poll_id)
+    poll = get_object_or_404(Poll, pk=poll_id)
     try:
-        selected_choice = p.choice_set.get(pk=request.POST['choice'])
+        selected_choice = poll.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
         return render(request, 'polls/detail.html', {
-            'poll': p,
+            'poll': poll,
             'error_message': "You didn't select a choice.",
         })
     else:
         selected_choice.votes += 1
         selected_choice.save()
-        return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
+
+        args = {}
+        args.update(csrf(request))
+        args["poll"] = poll
+        t = get_template("polls/result.html")
+        html = t.render(Context(args))
+        return HttpResponse(json.dumps(html), content_type="applecation/json")
