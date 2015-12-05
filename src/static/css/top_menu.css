@@ -32,7 +32,8 @@ body {
     height: 50px;
 }
 label {
-    color: #E1E80E;
+    color: greenyellow;
+    background-color: green;
 }
 p {
     color: #E1E80E;
