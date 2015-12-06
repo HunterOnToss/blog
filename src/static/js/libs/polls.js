@@ -28,6 +28,10 @@ $(document).ready(function(){
                 var div_with_polls = $('#poll_list');
                 div_with_polls.empty();
                 div_with_polls.append(json)
+            },
+            error : function(xhr,errmsg,err) {
+            alert("Login plz")
+
             }
         });
 
