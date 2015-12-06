@@ -45,6 +45,14 @@ h4 {
     color: #4ADDED;
 }
 
+h1 {
+    color: darkgreen;
+}
+
+ul li {
+    color: black;
+    background-color: mediumpurple;
+}
 
 h6 {
     color: #4AEDDD;
