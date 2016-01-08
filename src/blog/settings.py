@@ -28,6 +28,7 @@ INSTALLED_APPS = (
     'article',
     'login_sys',
     'polls',
+    'hunter_bank',
 )
 
 MIDDLEWARE_CLASSES = (
