@@ -2,7 +2,7 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
-SCORING_POINT = range(101)
+SCORING_POINT = {1: "1", 2: "2"}
 
 
 class Offer(models.Model):
@@ -21,8 +21,8 @@ class Offer(models.Model):
     offer_rotation_end = models.DateTimeField()
     offer_name = models.CharField(max_length=120)
     offer_type = models.SmallIntegerField(default=0, choices=TYPE_STATE.items(), verbose_name=u'тип предложения')
-    offer_minimal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT)
-    offer_maximal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT)
+    offer_minimal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items())
+    offer_maximal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items())
     offer_credit_organization = models.ForeignKey(Organization)
 
 
@@ -41,7 +41,6 @@ class Organization(models.Model):
     organization_name = models.CharField(max_length=120)
     organization_status = models.SmallIntegerField(default=0, choices=STATE.items(), verbose_name=u'тип предложения')
 
-
 class Client(models.Model):
     class Meta():
         db_table = "client"
@@ -54,7 +53,7 @@ class Client(models.Model):
     client_birthday = models.DateTimeField()
     client_phone_number = PhoneNumberField()
     client_passport_number = models.IntegerField(max_length=20, verbose_name=u"Номер паспорта")
-    client_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT)
+    client_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items())
 
 
 class CreditApplication(models.Model):
