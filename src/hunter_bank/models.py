@@ -5,6 +5,22 @@ from phonenumber_field.modelfields import PhoneNumberField
 SCORING_POINT = {1: "1", 2: "2"}
 
 
+class Organization(models.Model):
+    class Meta():
+        db_table = "organization"
+
+    EXVELLENT, GOOD, NORMALL, BAD, VERY_BAD = range(5)
+
+    STATE = {EXVELLENT: u'Отлично',
+             GOOD: u'Хорошо',
+             NORMALL: u'Нормально',
+             BAD: u'Плохо',
+             VERY_BAD: u"Очень плохо"}
+
+    organization_name = models.CharField(max_length=120)
+    organization_status = models.SmallIntegerField(default=0, choices=STATE.items(), verbose_name=u'тип предложения')
+
+
 class Offer(models.Model):
     class Meta():
         db_table = "offer"
@@ -25,21 +41,6 @@ class Offer(models.Model):
     offer_maximal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items())
     offer_credit_organization = models.ForeignKey(Organization)
 
-
-class Organization(models.Model):
-    class Meta():
-        db_table = "organization"
-
-    EXVELLENT, GOOD, NORMALL, BAD, VERY_BAD = range(5)
-
-    STATE = {EXVELLENT: u'Отлично',
-             GOOD: u'Хорошо',
-             NORMALL: u'Нормально',
-             BAD: u'Плохо',
-             VERY_BAD: u"Очень плохо"}
-
-    organization_name = models.CharField(max_length=120)
-    organization_status = models.SmallIntegerField(default=0, choices=STATE.items(), verbose_name=u'тип предложения')
 
 class Client(models.Model):
     class Meta():
