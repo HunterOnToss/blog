@@ -26,6 +26,8 @@ class Organization(models.Model):
 class Offer(models.Model):
     class Meta():
         db_table = "offer"
+        verbose_name = u"Предложение"
+        verbose_name_plural = u"Предложения"
 
     POTREB, IPOTEKA, AUTOCREDIT, KMCB = range(4)
     TYPE_STATE = {POTREB: u'потреб',
@@ -33,15 +35,18 @@ class Offer(models.Model):
                   AUTOCREDIT: u'автокредит',
                   KMCB: u'КМСБ'}
 
-    offer_create = models.DateTimeField()
-    offer_update = models.DateTimeField()
-    offer_rotation_begin = models.DateTimeField()
-    offer_rotation_end = models.DateTimeField()
-    offer_name = models.CharField(max_length=120)
-    offer_type = models.SmallIntegerField(default=0, choices=TYPE_STATE.items(), verbose_name=u'тип предложения')
-    offer_minimal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items())
-    offer_maximal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items())
-    offer_credit_organization = models.ForeignKey(Organization)
+    offer_create = models.DateTimeField(verbose_name=u"Дата создания")
+    offer_update = models.DateTimeField(verbose_name=u"Дата изменения")
+    offer_rotation_begin = models.DateTimeField(verbose_name=u"Начало ротации")
+    offer_rotation_end = models.DateTimeField(verbose_name=u"Окончание ротации")
+    offer_name = models.CharField(max_length=120, verbose_name=u"Название предложения")
+    offer_type = models.SmallIntegerField(default=0, choices=TYPE_STATE.items(), verbose_name=u'Тип предложения')
+    offer_minimal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items(),
+                                                           verbose_name=u"Минимальный скоринговый балл")
+    offer_maximal_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items(),
+                                                           verbose_name=u"Максимальный скоринговый балл")
+    offer_credit_organization = models.ForeignKey(Organization, verbose_name=u"Кредитная оргонизация")
+
 
 
 class Client(models.Model):
