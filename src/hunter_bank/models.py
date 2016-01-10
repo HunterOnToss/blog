@@ -2,12 +2,14 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
-SCORING_POINT = {1: "1", 2: "2"}
+SCORING_POINT = {1: "10%", 2: "20%", 3: "30%", 4: "40%", 5: "50%",
+                 6: "60%", 7: "70%", 8: "80%", 9: "90%", 10: "100%"}
 
 
 class Organization(models.Model):
     class Meta():
         db_table = "organization"
+        verbose_name_plural = u"Парнер"
 
     EXVELLENT, GOOD, NORMALL, BAD, VERY_BAD = range(5)
 
@@ -17,8 +19,8 @@ class Organization(models.Model):
              BAD: u'Плохо',
              VERY_BAD: u"Очень плохо"}
 
-    organization_name = models.CharField(max_length=120)
-    organization_status = models.SmallIntegerField(default=0, choices=STATE.items(), verbose_name=u'тип предложения')
+    organization_name = models.CharField(max_length=120, verbose_name=u"Партнер")
+    organization_status = models.SmallIntegerField(default=0, choices=STATE.items(), verbose_name=u'Тип предложения')
 
 
 class Offer(models.Model):
@@ -45,16 +47,19 @@ class Offer(models.Model):
 class Client(models.Model):
     class Meta():
         db_table = "client"
+        verbose_name = u"Анкета клиента"
+        verbose_name_plural = u"Анкеты клиентов"
 
-    client_create = models.DateTimeField()
-    client_update = models.DateTimeField()
-    client_name = models.CharField(max_length=48)
-    client_family = models.CharField(max_length=48)
-    client_otchestvo = models.CharField(max_length=48)
-    client_birthday = models.DateTimeField()
-    client_phone_number = PhoneNumberField()
+    client_create = models.DateTimeField(verbose_name=u"Дата создания")
+    client_update = models.DateTimeField(verbose_name=u"Дата изменения")
+    client_name = models.CharField(max_length=48, verbose_name=u"Имя клиента")
+    client_family = models.CharField(max_length=48, verbose_name=u"Фамилия клиента")
+    client_otchestvo = models.CharField(max_length=48, verbose_name=u"Отчество клиента")
+    client_birthday = models.DateTimeField(verbose_name=u"Дата рождения клиента")
+    client_phone_number = PhoneNumberField(verbose_name=u"Номер телефона")
     client_passport_number = models.IntegerField(max_length=20, verbose_name=u"Номер паспорта")
-    client_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items())
+    client_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items(),
+                                                    verbose_name=u"скоринговый балл")
 
 
 class CreditApplication(models.Model):
