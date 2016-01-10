@@ -22,6 +22,9 @@ class Organization(models.Model):
     organization_name = models.CharField(max_length=120, verbose_name=u"Партнер")
     organization_status = models.SmallIntegerField(default=0, choices=STATE.items(), verbose_name=u'Тип предложения')
 
+    def __unicode__(self):
+        return self.organization_name
+
 
 class Offer(models.Model):
     class Meta():
@@ -47,6 +50,8 @@ class Offer(models.Model):
                                                            verbose_name=u"Максимальный скоринговый балл")
     offer_credit_organization = models.ForeignKey(Organization, verbose_name=u"Кредитная оргонизация")
 
+    def __unicode__(self):
+        return self.offer_name
 
 
 class Client(models.Model):
@@ -66,6 +71,9 @@ class Client(models.Model):
     client_passport_number = models.IntegerField(max_length=20, verbose_name=u"Номер паспорта")
     client_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items(),
                                                     verbose_name=u"скоринговый балл")
+
+    def __unicode__(self):
+        return self.client_name
 
 
 class CreditApplication(models.Model):
