@@ -12,7 +12,7 @@ class OrganizationAdmin(admin.ModelAdmin):
 
 class ClientAdmin(admin.ModelAdmin):
     list_filter = ['client_create']
-    list_display = ('pk', 'client_create', 'client_update', 'client_name', 'client_family', 'client_otchestvo',
+    list_display = ('ID', 'client_create', 'client_update', 'client_name', 'client_family', 'client_otchestvo',
                     'client_birthday', 'client_phone_number', 'client_passport_number', 'client_scoring_point')
 
 admin.site.register(Offer, OfferAdmin)

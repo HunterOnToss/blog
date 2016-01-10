@@ -50,6 +50,7 @@ class Client(models.Model):
         verbose_name = u"Анкета клиента"
         verbose_name_plural = u"Анкеты клиентов"
 
+    ID = models.AutoField(primary_key=True)
     client_create = models.DateTimeField(verbose_name=u"Дата создания")
     client_update = models.DateTimeField(verbose_name=u"Дата изменения")
     client_name = models.CharField(max_length=48, verbose_name=u"Имя клиента")
