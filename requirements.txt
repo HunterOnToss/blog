@@ -2,3 +2,6 @@ django==1.6.8
 Pillow==2.9.0
 celery
 django-phonenumber-field
+
+djangorestframework
+pygments
