@@ -38,8 +38,8 @@ class Offer(models.Model):
                   AUTOCREDIT: u'автокредит',
                   KMCB: u'КМСБ'}
 
-    offer_create = models.DateTimeField(verbose_name=u"Дата создания")
-    offer_update = models.DateTimeField(verbose_name=u"Дата изменения")
+    offer_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
+    offer_update = models.DateTimeField(auto_now=True, verbose_name=u"Дата изменения")
     offer_rotation_begin = models.DateTimeField(verbose_name=u"Начало ротации")
     offer_rotation_end = models.DateTimeField(verbose_name=u"Окончание ротации")
     offer_name = models.CharField(max_length=120, verbose_name=u"Название предложения")
@@ -61,8 +61,8 @@ class Client(models.Model):
         verbose_name_plural = u"Анкеты клиентов"
 
     ID = models.AutoField(primary_key=True)
-    client_create = models.DateTimeField(verbose_name=u"Дата создания")
-    client_update = models.DateTimeField(verbose_name=u"Дата изменения")
+    client_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
+    client_update = models.DateTimeField(auto_now=True, verbose_name=u"Дата изменения")
     client_name = models.CharField(max_length=48, verbose_name=u"Имя клиента")
     client_family = models.CharField(max_length=48, verbose_name=u"Фамилия клиента")
     client_otchestvo = models.CharField(max_length=48, verbose_name=u"Отчество клиента")
@@ -85,8 +85,8 @@ class CreditApplication(models.Model):
         NEW: u'Новый',
         SENT: u'Отправленный',
     }
-    credit_application_create = models.DateTimeField()
-    credit_application_send = models.DateTimeField()
+    credit_application_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
+    credit_application_send = models.DateTimeField(verbose_name=u"Дата отправки")
     credit_application_client = models.ForeignKey(Client)
     credit_application_offer = models.ForeignKey(Offer)
     credit_application_status = models.SmallIntegerField(default=0, choices=STATUS.items(), verbose_name=u'Статус')
