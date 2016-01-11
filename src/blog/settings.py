@@ -29,6 +29,8 @@ INSTALLED_APPS = (
     'login_sys',
     'polls',
     'hunter_bank',
+    'snippets',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
