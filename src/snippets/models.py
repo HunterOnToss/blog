@@ -1,4 +1,4 @@
-from __future__ import unicode_literals
+# from __future__ import unicode_literals
 # coding=utf-8
 from django.db import models
 from pygments.lexers import get_all_lexers
@@ -14,7 +14,7 @@ STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
 
 class Snippet(models.Model):
     created = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=100, blank=True, default='Заголовок')
+    title = models.CharField(max_length=100, blank=True, default=u'Заголовок')
     code = models.TextField()
     linenos = models.BooleanField(default=False)
     language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
