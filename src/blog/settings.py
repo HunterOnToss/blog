@@ -28,6 +28,9 @@ INSTALLED_APPS = (
     'article',
     'login_sys',
     'polls',
+    'hunter_bank',
+    'snippets',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -78,6 +81,11 @@ STATICFILES_DIRS = (
 )
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 5
+}
+
 try:
     from .local import *
 except ImportError:
