@@ -1,6 +1,7 @@
 django
 Pillow==2.9.0
 celery
+redis
 django-phonenumber-field
 
 djangorestframework
