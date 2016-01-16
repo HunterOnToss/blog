@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^', include('learn.urls')),
     url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^', include('snippets.urls')),
+    url(r'^bank/', include('hunter_bank.urls', namespace="bank")),
 )
 
 urlpatterns += staticfiles_urlpatterns() + static(
