@@ -2,8 +2,15 @@ django
 Pillow==2.9.0
 celery
 redis
-django-phonenumber-field
+#=============================================
 
+#REST Framework
+
+django-phonenumber-field
 djangorestframework
 pygments
 httpie
+markdown
+django-filter
+
+#=============================================
