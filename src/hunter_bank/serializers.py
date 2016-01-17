@@ -23,9 +23,13 @@ class ClientSerializer(serializers.Serializer):
     client_name = serializers.CharField(required=True, max_length=48)
     client_family = serializers.CharField(required=True, max_length=48)
     client_otchestvo = serializers.CharField(required=True, max_length=48)
+    client_birthday = serializers.DateField(required=True)
     client_phone_number = serializers.CharField(required=True, max_length=12)
     client_passport_number = serializers.IntegerField(required=True)
     client_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
+
+    def create(self, validated_data):
+        return Client.objects.create(**validated_data)
 
 
 class OfferSerializer(serializers.Serializer):

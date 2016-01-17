@@ -66,7 +66,7 @@ class Client(models.Model):
     client_name = models.CharField(max_length=48, verbose_name=u"Имя клиента")
     client_family = models.CharField(max_length=48, verbose_name=u"Фамилия клиента")
     client_otchestvo = models.CharField(max_length=48, verbose_name=u"Отчество клиента")
-    client_birthday = models.DateTimeField(verbose_name=u"Дата рождения клиента")
+    client_birthday = models.DateField(verbose_name=u"Дата рождения клиента")
     client_phone_number = PhoneNumberField(verbose_name=u"Номер телефона")
     client_passport_number = models.IntegerField(max_length=20, verbose_name=u"Номер паспорта")
     client_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items(),
