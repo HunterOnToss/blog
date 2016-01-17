@@ -12,5 +12,6 @@ pygments
 httpie
 markdown
 django-filter
+django-crispy-forms
 
 #=============================================
