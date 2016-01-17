@@ -1,5 +1,31 @@
 from rest_framework import serializers
-from hunter_bank.models import Offer, SCORING_POINT
+from hunter_bank.models import Offer, Client, SCORING_POINT
+
+
+class ClientSerializer(serializers.Serializer):
+    class Meta:
+        model = Client
+        fields = ("ID",
+                  "client_create",
+                  "client_update",
+                  "client_name",
+                  "client_family",
+                  "client_otchestvo",
+                  "client_birthday",
+                  "client_phone_number",
+                  "client_passport_number",
+                  "client_scoring_point",
+                  )
+
+    ID = serializers.IntegerField(read_only=True)
+    client_create = serializers.DateTimeField(read_only=True)
+    client_update = serializers.DateTimeField(read_only=True)
+    client_name = serializers.CharField(required=True, max_length=48)
+    client_family = serializers.CharField(required=True, max_length=48)
+    client_otchestvo = serializers.CharField(required=True, max_length=48)
+    client_phone_number = serializers.CharField(required=True, max_length=12)
+    client_passport_number = serializers.IntegerField(required=True)
+    client_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
 
 
 class OfferSerializer(serializers.Serializer):
