@@ -31,6 +31,17 @@ class ClientSerializer(serializers.Serializer):
     def create(self, validated_data):
         return Client.objects.create(**validated_data)
 
+    def update(self, instance, validated_data):
+        instance.client_name = validated_data.get("client_name", instance.client_name)
+        instance.client_family = validated_data.get("client_family", instance.client_family)
+        instance.client_otchestvo = validated_data.get("client_otchestvo", instance.client_otchestvo)
+        instance.client_phone_number = validated_data.get("client_phone_number", instance.client_phone_number)
+        instance.client_passport_number = validated_data.get("client_passport_number", instance.client_passport_number)
+        instance.client_scoring_point = validated_data.get("client_scoring_point", instance.client_scoring_point)
+        instance.save()
+
+        return instance
+
 
 class OfferSerializer(serializers.Serializer):
     class Meta:
