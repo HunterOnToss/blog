@@ -1,3 +1,4 @@
+# coding=utf-8
 from hunter_bank.models import Offer, Client
 from hunter_bank.serializers import OfferSerializer, ClientSerializer
 from rest_framework.response import Response
@@ -21,9 +22,18 @@ class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-    filter_backends = (filters.DjangoFilterBackend,)
+    # Подключаем фильтры
+    filter_backends = (filters.DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
+    # Выбираем поля по которым будем фильтровать
     filter_fields = ("ID", "client_create", "client_update", "client_family", "client_birthday", "client_phone_number",
                      "client_passport_number", "client_scoring_point")
+    # Выбираем поля по которым будет производится поиск
+    search_fields = ("ID", "client_family")
+    # Выираем какие поля можно отсортировать, __all__ значит все поля которые есть в модели
+    ordering_fields = "__all__"
+    # Поле по которому будет производится сортировка при обращение к API.
+    # Думаю логично что партнеров интерисуют клиенты с наибольшим scoring_point
+    ordering = ("-client_scoring_point",)
 
 
 @api_view
