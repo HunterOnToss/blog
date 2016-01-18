@@ -15,6 +15,7 @@ class CreditApplicationSerializer(serializers.Serializer):
 
     credit_application_create = serializers.DateTimeField(read_only=True)
     credit_application_send = serializers.DateTimeField(read_only=True)
+    credit_application_status = serializers.ChoiceField(choices=CreditApplication.STATUS)
 
 
 class ClientSerializer(serializers.Serializer):

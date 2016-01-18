@@ -73,7 +73,7 @@ class Client(models.Model):
                                                     verbose_name=u"скоринговый балл")
 
     def __unicode__(self):
-        return self.client_name
+        return self.client_family
 
 
 class CreditApplication(models.Model):

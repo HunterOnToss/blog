@@ -1,12 +1,18 @@
 # coding=utf-8
-from hunter_bank.models import Offer, Client
-from hunter_bank.serializers import OfferSerializer, ClientSerializer
+from hunter_bank.models import Offer, Client, CreditApplication
+from hunter_bank.serializers import OfferSerializer, ClientSerializer, CreditApplicationSerializer
 from rest_framework.response import Response
 from rest_framework import permissions
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
 from rest_framework import filters
+
+
+class CreditApplicationViewSet(viewsets.ModelViewSet):
+    queryset = CreditApplication.objects.all()
+    serializer_class = CreditApplicationSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class OfferViewSet(viewsets.ModelViewSet):
