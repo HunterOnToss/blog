@@ -1,5 +1,20 @@
 from rest_framework import serializers
-from hunter_bank.models import Offer, Client, SCORING_POINT
+from hunter_bank.models import Offer, Client, SCORING_POINT, CreditApplication
+
+
+class CreditApplicationSerializer(serializers.Serializer):
+    class Meta:
+        model = Client
+        fields = (
+            "credit_application_create",
+            "credit_application_send",
+            "credit_application_client",
+            "credit_application_offer",
+            "credit_application_status",
+        )
+
+    credit_application_create = serializers.DateTimeField(read_only=True)
+    credit_application_send = serializers.DateTimeField(read_only=True)
 
 
 class ClientSerializer(serializers.Serializer):
