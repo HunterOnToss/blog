@@ -86,7 +86,7 @@ class CreditApplication(models.Model):
         SENT: u'Отправленный',
     }
     credit_application_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
-    credit_application_send = models.DateTimeField(verbose_name=u"Дата отправки")
+    credit_application_send = models.DateTimeField(blank=True, null=True, verbose_name=u"Дата отправки")
     credit_application_client = models.ForeignKey(Client)
     credit_application_offer = models.ForeignKey(Offer)
     credit_application_status = models.SmallIntegerField(default=0, choices=STATUS.items(), verbose_name=u'Статус')
