@@ -79,6 +79,8 @@ class Client(models.Model):
 class CreditApplication(models.Model):
     class Meta():
         db_table = "credit_application"
+        verbose_name = u"Заявка в кредитную организацию"
+        verbose_name_plural = u"Заявки в кредитную организацию"
 
     NEW, SENT = range(2)
     STATUS = {
@@ -87,6 +89,9 @@ class CreditApplication(models.Model):
     }
     credit_application_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
     credit_application_send = models.DateTimeField(blank=True, null=True, verbose_name=u"Дата отправки")
-    credit_application_client = models.ForeignKey(Client)
+    credit_application_client = models.ForeignKey(Client, related_name="client")
     credit_application_offer = models.ForeignKey(Offer)
     credit_application_status = models.SmallIntegerField(default=0, choices=STATUS.items(), verbose_name=u'Статус')
+
+    def __unicode__(self):
+        return u"{}".format(self.STATUS[self.credit_application_status])

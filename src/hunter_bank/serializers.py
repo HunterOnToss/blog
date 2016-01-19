@@ -31,6 +31,7 @@ class ClientSerializer(serializers.Serializer):
                   "client_phone_number",
                   "client_passport_number",
                   "client_scoring_point",
+                  "client",
                   )
 
     ID = serializers.IntegerField(read_only=True)
@@ -43,6 +44,7 @@ class ClientSerializer(serializers.Serializer):
     client_phone_number = serializers.CharField(required=True, max_length=12)
     client_passport_number = serializers.IntegerField(required=True)
     client_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
+    client = serializers.StringRelatedField(read_only=True, many=True)
 
     def create(self, validated_data):
         return Client.objects.create(**validated_data)
