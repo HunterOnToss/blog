@@ -13,11 +13,12 @@ class OrganizationAdmin(admin.ModelAdmin):
 class ClientAdmin(admin.ModelAdmin):
     list_filter = ['client_create']
     list_display = ('ID', 'client_create', 'client_update', 'client_name', 'client_family', 'client_otchestvo',
-                    'client_birthday', 'client_phone_number', 'client_passport_number', 'client_scoring_point')
+                    'client_birthday', 'client_phone_number', 'client_passport_number', 'client_scoring_point',
+                    'client_credit_application')
 
 
 class CreditApplicationAdmin(admin.ModelAdmin):
-    list_display = ('credit_application_create', 'credit_application_send', 'credit_application_client',
+    list_display = ('credit_application_create', 'credit_application_send',
                     'credit_application_offer', 'credit_application_status')
 
 admin.site.register(Offer, OfferAdmin)
