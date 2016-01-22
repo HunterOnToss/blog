@@ -90,7 +90,7 @@ class CreditApplication(models.Model):
     credit_application_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
     credit_application_send = models.DateTimeField(blank=True, null=True, verbose_name=u"Дата отправки")
     credit_application_client = models.ForeignKey(Client, related_name="client")
-    credit_application_offer = models.ForeignKey(Offer)
+    credit_application_offer = models.ForeignKey(Offer, related_name="offer")
     credit_application_status = models.SmallIntegerField(default=0, choices=STATUS.items(), verbose_name=u'Статус')
 
     def __unicode__(self):

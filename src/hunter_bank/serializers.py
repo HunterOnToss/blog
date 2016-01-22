@@ -74,6 +74,7 @@ class OfferSerializer(serializers.Serializer):
             "offer_minimal_scoring_point",
             "offer_maximal_scoring_point",
             "offer_credit_organization",
+            "offer"
         )
 
     pk = serializers.IntegerField(read_only=True)
@@ -85,4 +86,4 @@ class OfferSerializer(serializers.Serializer):
     offer_type = serializers.ChoiceField(choices=Offer.TYPE_STATE)
     offer_minimal_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
     offer_maximal_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
-    # offer_credit_organization = OfferCreditOrganizationSerializer(source="offer_credit_organization")
+    offer = serializers.StringRelatedField(read_only=True, many=True)
