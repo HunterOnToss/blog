@@ -71,7 +71,6 @@ class Client(models.Model):
     client_passport_number = models.IntegerField(max_length=20, verbose_name=u"Номер паспорта")
     client_scoring_point = models.SmallIntegerField(default=0, choices=SCORING_POINT.items(),
                                                     verbose_name=u"скоринговый балл")
-    client_credit_application = models.ForeignKey('CreditApplication', verbose_name=u"Статус Анкеты")
 
     def __unicode__(self):
         return self.client_family
@@ -90,6 +89,7 @@ class CreditApplication(models.Model):
     }
     credit_application_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
     credit_application_send = models.DateTimeField(blank=True, null=True, verbose_name=u"Дата отправки")
+    credit_application_client = models.ForeignKey(Client, related_name="client")
     credit_application_offer = models.ForeignKey(Offer)
     credit_application_status = models.SmallIntegerField(default=0, choices=STATUS.items(), verbose_name=u'Статус')
 
