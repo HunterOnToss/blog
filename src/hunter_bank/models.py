@@ -73,7 +73,7 @@ class Client(models.Model):
                                                     verbose_name=u"скоринговый балл")
 
     def __unicode__(self):
-        return self.client_family
+        return u"{} {}".format(self.client_family, self.client_name)
 
 
 class CreditApplication(models.Model):
@@ -89,9 +89,14 @@ class CreditApplication(models.Model):
     }
     credit_application_create = models.DateTimeField(auto_now_add=True, verbose_name=u"Дата создания")
     credit_application_send = models.DateTimeField(blank=True, null=True, verbose_name=u"Дата отправки")
-    credit_application_client = models.ForeignKey(Client, related_name="client")
-    credit_application_offer = models.ForeignKey(Offer, related_name="offer")
+    credit_application_client = models.ForeignKey(Client, related_name="client_credit_application")
+    credit_application_offer = models.ForeignKey(Offer, related_name="offer_credit_application")
     credit_application_status = models.SmallIntegerField(default=0, choices=STATUS.items(), verbose_name=u'Статус')
 
     def __unicode__(self):
-        return u"{}".format(self.STATUS[self.credit_application_status])
+        return u"И.О Клиента : {}, Статус Анкеты : {}, Предложение : {}".format \
+            (
+                    self.credit_application_client.client_family,
+                    self.STATUS[self.credit_application_status],
+                    self.credit_application_offer.offer_name,
+            )

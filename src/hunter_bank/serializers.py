@@ -31,7 +31,7 @@ class ClientSerializer(serializers.Serializer):
                   "client_phone_number",
                   "client_passport_number",
                   "client_scoring_point",
-                  "client",
+                  "client_credit_application",
                   )
 
     ID = serializers.IntegerField(read_only=True)
@@ -44,7 +44,7 @@ class ClientSerializer(serializers.Serializer):
     client_phone_number = serializers.CharField(required=True, max_length=12)
     client_passport_number = serializers.IntegerField(required=True)
     client_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
-    client = serializers.StringRelatedField(read_only=True, many=True)
+    client_credit_application = serializers.StringRelatedField(read_only=True, many=True)
 
     def create(self, validated_data):
         return Client.objects.create(**validated_data)
@@ -74,7 +74,7 @@ class OfferSerializer(serializers.Serializer):
             "offer_minimal_scoring_point",
             "offer_maximal_scoring_point",
             "offer_credit_organization",
-            "offer"
+            "offer_credit_application"
         )
 
     pk = serializers.IntegerField(read_only=True)
@@ -86,4 +86,4 @@ class OfferSerializer(serializers.Serializer):
     offer_type = serializers.ChoiceField(choices=Offer.TYPE_STATE)
     offer_minimal_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
     offer_maximal_scoring_point = serializers.ChoiceField(choices=SCORING_POINT)
-    offer = serializers.StringRelatedField(read_only=True, many=True)
+    offer_credit_application = serializers.StringRelatedField(read_only=True, many=True)
