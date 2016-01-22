@@ -94,9 +94,10 @@ class CreditApplication(models.Model):
     credit_application_status = models.SmallIntegerField(default=0, choices=STATUS.items(), verbose_name=u'Статус')
 
     def __unicode__(self):
-        return u"И.О Клиента : {}, Статус Анкеты : {}, Предложение : {}".format \
+        return u"Ф.И. Клиента : {} {}, Статус Анкеты : {}, Предложение : {}".format \
             (
                     self.credit_application_client.client_family,
+                    self.credit_application_client.client_name,
                     self.STATUS[self.credit_application_status],
                     self.credit_application_offer.offer_name,
             )
